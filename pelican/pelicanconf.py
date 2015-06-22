@@ -6,8 +6,7 @@ import os
 
 SITEURL = ''
 AUTHOR = u'charlesreid1'
-SITENAME = u'dox'
-#SITEURL = '/dox'
+SITENAME = u'charlesreid1'
 
 PATH = 'content'
 TIMEZONE = 'America/Los_Angeles'
