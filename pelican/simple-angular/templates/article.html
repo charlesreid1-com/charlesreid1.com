@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block title %}Blog - {{ SITENAME }}{% endblock %}
+{% block content %}
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-8 col-centered" style="text-align: center;">
+            <h1 class="jumbo entry-title">
+                    Doxuments Knowledge Bank
+            </h1>
+            <p><a href="{{ SITEURL }}/blog/#a_archive" class="btn btn-large btn-primary">Knowledge Bank Home</a></p>
+        </div>
+    </div>
+
+    <div class="v150"></div>
+
+    {% include '_includes/short_article.html' %}
+
+</div>
+
+{% endblock %}
+

@@ -1,0 +1,787 @@
+{% extends 'base.html' %}
+{#
+{% set mytitle="index" %}
+{% block title %}{{ mytitle }}{% endblock %}
+#}
+{% block content %}
+
+<link href="{{ SITEURL }}/dox.css" rel="stylesheet" stype="text/css" />
+
+<!--
+if i put this at the end of the document,
+like everyone tells you to,
+i get stupid reference errors about stupid $ not being defined
+-->
+<script type="text/javascript" src="{{ SITEURL }}/theme/js/jquery-1.11.2.js"></script>
+
+<script type="text/javascript">
+
+(function() {
+
+    function IndexCtrl($scope) {
+
+        var all_sections2 = [];
+
+        // --------------------------------------------
+        // Define an array that will store all bits of info
+        // about each section 
+        
+        var all_sections = [];
+        
+        // Technical editing
+        moo = {};
+        moo['title']        = "Technical Editing";
+        moo['btn_text']     = "Technical Editing";
+        moo['link_target']  = '#a_techedit';
+        moo['text']         = 'We put the "technical" back in "technical editing."';
+        moo['paragraph']    = "Doxuments provides technical editing services from a chemical engineering Ph.D. with the technical breadth and depth you need from an editor. Whether you're writing a book, a disseration, a scientific paper, or a manuscript, our technical editing services nail down the details: writing quality, idea development, cross-referencing, equation-checking, compositing, image formatting, and print layouts. When it comes to effective technical communication, Doxuments helps you hit your target.";
+
+        moo['img']          = '1editing.jpg';
+        moo['icon']         = 'fa-pencil';
+        all_sections.push(moo);
+        
+        // Document formats
+        moo = {};
+        moo['title']        = "Document Formats";
+        moo['btn_text']     = 'Document Formats';
+        moo['link_target']  = '#a_doctypes';
+        moo['text']         = "A technical documents Babelfish, Doxuments can handle it all: LaTeX, Word, HTML, even large code bases.";
+        moo['paragraph']    = "In our modern technology ecosystem there are dozens of document formats to deal with. Doxuments is the Babelfish that ties everything together: we can handle any technical document format, ranging from Word to Latex, PDF to HTML, Matlab script comments or inline Python documentation, even optical character recognition for scanned images of documents, and turn them into any format you want. Whether you're writing a graduate-level mathematics textbook, converting your dissertation from Word to Latex, or documenting a huge code base, Doxuments has you covered.";
+        moo['img']          = '2formats.jpg';
+        moo['icon']         = 'fa-exchange';
+        all_sections.push(moo);
+        
+        // Compositing and Typesetting
+        moo = {};
+        moo['title']        = "Compositing and Typesetting";
+        moo['btn_text']     = 'Compositing & Typesetting';
+        moo['link_target']  = '#a_compositing';
+        moo['text']         = "Our mastery of the complexities of document formats make compositing and layout headaches disappear.";
+        moo['paragraph']    = "Going from a finished document to a document that’s ready to publish is a long process requiring esoteric knowledge of publishing lingo. Doxuments does all the hard work of compositing and typesetting for the pre-publishing step. Doxuments can also build you a custom webpage or blog for your technical content, or customize your existing web content. Whatever your publishing medium, Doxuments handles the details.";
+        moo['img']          = '3compositing.jpg';
+        moo['icon']         = 'fa-crop';
+        all_sections.push(moo);
+        
+        // Design
+        moo = {};
+        moo['title']        = "Document Design";
+        moo['btn_text']     = 'Document Design';
+        moo['link_target']  = '#a_design';
+        moo['text']         = "Turbo-charge your technical communications with Doxuments-designed templates and style guides.";
+        moo['paragraph']    = "A consistent visual and written style make your documents communicate with power. Doxuments offers design services for document templates and books for your company. Doxuments can also create a style guide for your company, laboratory, or department.  Doxuments design services helps you to say it right and get people listening.";
+        moo['img']          = '4design.jpg';
+        moo['icon']         = 'fa-dot-circle-o';
+        all_sections.push(moo);
+        
+        // Automation and scripting
+        moo = {};
+        moo['title']        = "Automation and Scripting";
+        moo['btn_text']     = 'Automation & Scripting';
+        moo['link_target']  = '#a_autoscript';
+        moo['text']         = "Spend less time fiddling and more time analyzing: Doxuments brings the power of modern programming languages to bear on your workflow.";
+        moo['paragraph']    = "Wish your code base would document itself? Slogging through the same repetitive tasks to make reports? Do you daydream about being able to run an experiment, process and analyze the data, and generate a report filled with graphs with the push of a single button?  No sweat: Doxuments offers report generation services to make all of this possible.";
+        moo['img']          = '5automation.jpg';
+        moo['icon']         = 'fa-magic';
+        all_sections.push(moo);
+
+
+        $scope.all_sections = all_sections;
+
+    };
+
+    var a = angular.module("indexApp", [], function($interpolateProvider) {
+                $interpolateProvider.startSymbol('[[');
+                $interpolateProvider.endSymbol(']]');
+            }
+        );
+    var c = a.controller("IndexCtrl", ["$scope", IndexCtrl]);
+
+})();
+
+</script>
+
+<div ng-app="indexApp">
+<div ng-controller="IndexCtrl">
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <div class="cosmojumbo">
+                <h1 class="jumbojumbo"><b>Doxuments</b></h1>
+                <h1 class="jumbo">Technical Editing &amp; Publishing Services</h1>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 col-centered" style="text-align: center;">
+            <div class="cosmojumbo">
+                <p class="lead cosmojumboText">
+                Doxuments provides technical editing and document publication services
+                from a chemical engineering Ph.D. with national laboratory and industrial experience. 
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <a href="#a_services" class="btn btn-primary index-btn">Explore Our Services&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-down"></i></a>
+            <a href="#a_contact" class="btn btn-primary index-btn">Contact Doxuments&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-right"></i></a>
+        </div>
+    </div>
+
+
+
+
+    <a name="a_services"></a>
+    <div class="v300"></div>
+    <hr />
+
+
+
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <h1 class="jumbo"><b>Doxuments Services</b></h1>
+        </div>
+    </div>
+
+
+
+
+    <div ng-repeat="section in all_sections">
+
+
+
+        <div class="v300"></div>
+
+
+
+        <div class="row">
+            <div class="col-sm-12" style="text-align: center;">
+                <h2>[[section.btn_text]]</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-8 col-centered" style="text-align: center;">
+                <p class="lead">[[section.text]]</p>
+            </div>
+        </div>
+
+
+        <div class="v50"></div>
+
+
+        <div class="row">
+            <div class="col-sm-6" style="text-align: center;">
+
+                <!--
+                yes, you're not "supposed" to put [[ ]] straight into the class="" attribute,
+                but the geniuses who designed angular provided absolutely no way to 
+                use an ng-repeat loop variable from within an ng-class statement.
+                -->
+                <i class="fa fa-5x [[section.icon]]"></i>
+
+            </div>
+            <div class="col-sm-6 vcenter" style="text-align: center;">
+                <p>[[section.paragraph]]
+                </p>
+            </div>
+        </div>
+    </div><!-- ng-repeat -->
+
+
+
+
+
+
+
+    <!--
+    #####################
+    how it wurk
+    -->
+
+    <a name="a_how"></a>
+    <div class="v300"></div>
+    <hr />
+
+
+
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <h1 class="jumbo"><b>How It Works</b></h1>
+        </div>
+    </div>
+
+
+
+
+    <div class="v300"></div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12" style="text-align: center;">
+            <h2>The Doxuments Timeline</h2>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-8 col-centered" style="text-align: center;">
+            <p class="lead">
+            Doxuments always runs on time. Take a look
+            at the diagram below to understand how we work with 
+            our customers throughout the editing process 
+            to meet their deadlines and ensure their satisfaction.
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-12 col-centered" style="text-align: center;">
+
+            <div id="subway"></div>
+
+            <script type="text/javascript">
+
+                // Define the resolution
+                var width  = 500;
+                var height = 800;
+                
+                // Create the SVG 'canvas'
+                var svg = d3.select("div#subway")
+                    .append("svg")
+                    .attr('width',width)
+                    .attr('height',height);
+                    //.attr("viewBox", "0 0 " + width + " " + height)
+                
+                // get the data
+                var dataset = [
+                    { value: 1, label: "Get in touch with Doxuments" },
+                    { value: 2, label: "Contract negotiation (work scope, timeline, cost)"},
+                    { value: 3, label: "Contract initiation with 10-20% advance" },
+                    { value: 4, label: "Editing: Doxuments performs edits according to timeline" },
+                    { value: 5, label: "Revision: Customer revises manuscript between edits"},
+                    { value: 6, label: "Prior two steps repeated as per contract"}, 
+                    { value: 7, label: "Manuscript ready for publication"}, 
+                    { value: 8, label: "Doxuments ensures customer satisfaction"}, 
+                    { value: 9, label: "Contract fulfilled with payment of remaining balance"}, 
+                ];
+                
+                // Define the padding around the graph
+                var ypadding = 40;
+                
+                var yScale = d3.scale.linear()
+                    .domain([0, d3.max(dataset, function(d) { return d.value; })])
+                    .range([ypadding, height - ypadding]);
+                
+                // draw line graph
+                var line = d3.svg.line()
+                    .x(function(d) { 
+                        return 30;//xScale(d.date); 
+                    })
+                    .y(function(d) { 
+                        return yScale(d.value); 
+                    });
+                
+                svg.append("svg:path").attr("d", line(dataset));
+                
+                // plot circles
+                svg.selectAll("circle")
+                    .data(dataset)
+                    .enter()
+                    .append("circle")
+                    .attr("class", "data-point")
+                    .attr("cx", function(d) {
+                        return 30;
+                    })
+                    .attr("cy", function(d) {
+                        return yScale(d.value);
+                    })
+                    .attr("r", 8);
+
+                svg.selectAll("text")
+                    .data(dataset)
+                    .enter()
+                    .append("text")
+                    .attr("x", function(d) { return 50  })
+                    .attr("y", function(d,i) { return yScale(d.value) + 5 })
+                    .attr("font-size","18px")
+                    .text( function(d) { return d.label });
+
+            </script>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!--
+    #####################
+    pricing 
+    -->
+
+    <a name="a_pricing"></a>
+    <div class="v300"></div>
+    <hr />
+
+
+
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <h1 class="jumbo"><b>Pricing</b></h1>
+        </div>
+    </div>
+
+
+
+
+    <div class="v300"></div>
+
+
+
+
+    <div class="row">
+        <div class="col-sm-12" style="text-align: center;">
+            <h2>The Levels of Edit System</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-8 col-centered" style="text-align: center;">
+            <p class="lead">
+            Doxuments uses a Levels of Edit system to classify edits,
+            based on the Jet Propulsion Laboratory's own Levels of Edit system.
+            Doxuments offers four levels of edit, with each level 
+            focusing on a different aspect of the document.
+        </div>
+    </div>
+    <div class="v50"></div>
+
+    <div class="row">
+        <div class="col-sm-8 col-centered" style="text-align: center;">
+            <table class="table table-striped">
+                <tr>
+
+                    <th style="text-align: center; width: 100px;">Edit Level</th>
+                    <th style="text-align: center;">Name</th>
+                    <th style="text-align: center;">Description</th>
+
+                </tr><tr>
+
+                    <td><span class="badge">Level 4</span></td>
+                    <td>Compositing and Layout Edits</td>
+                    <td>Editing of layout and arrangement of text, figures, tables, etc. for final printing.</td>
+
+                </tr><tr>
+
+                    <td><span class="badge">Level 3</span></td>
+                    <td>Copyedits</td>
+                    <td>Editing to check for spelling, grammar, punctuation errors, consistency issues, and adherence to style guide.</td>
+
+                </tr><tr>
+
+                    <td><span class="badge">Level 2</span></td>
+                    <td>Mathematics and Quantitative Edits</td>
+                    <td>Editing of mathematical equations, quantitative references, inferences, and qualitative trends to ensure consistency and clarity.</td>
+
+                </tr><tr>
+
+                    <td><span class="badge">Level 1</span></td>
+                    <td>Logical and Technical Edits</td>
+                    <td>Editing to ensure correct and consistent technical details, logical idea development, and strong arguments.</td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+
+    <div class="v300"></div>
+
+
+
+
+    <div class="row">
+        <div class="col-sm-12" style="text-align: center;">
+            <h2>The Doxuments Package</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-8 col-centered" style="text-align: center;">
+            <p class="lead">
+            Take full advantage of all that Doxuments has to offer
+            by purchasing Doxuments services as a package,
+            and you'll receive a discount of 33%!
+        </div>
+    </div>
+    <div class="v50"></div>
+
+    <div class="row">
+        <div class="col-sm-6 col-centered" style="text-align: center;">
+            <table class="table">
+                <tr>
+
+                    <th style="text-align: center;">Item</th>
+                    <th style="text-align: center;">Name</th>
+                    <th style="text-align: center;">Price</th>
+
+                </tr><tr>
+
+                    <td><span class="badge">Level 4</span></td>
+                    <td>Compositing and Layout Edits</td>
+                    <td>2 &cent; / word</td>
+
+                </tr><tr>
+
+                    <td><span class="badge">Level 3</span></td>
+                    <td>Copyedits</td>
+                    <td>1 &cent; / word</td>
+
+                </tr><tr>
+
+                    <td><span class="badge">Level 2</span></td>
+                    <td>Mathematics and Quantitative Edits</td>
+                    <td>2 &cent; / word</td>
+
+                </tr><tr>
+
+                    <td><span class="badge">Level 1</span></td>
+                    <td>Logical and Technical Edits</td>
+                    <td>2 &cent; / word</td>
+
+                </tr><tr>
+
+                    <td></td>
+                    <td>&ndash; 33% Package Discount</td>
+                    <td>&ndash; 2 &cent; / word</td>
+
+                </tr><tr>
+
+                    <td></td>
+                    <td><b>Grand Total</b></td>
+                    <td><p class="text-success"><b>5 &cent; / word
+                    </b></p></td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="v300"></div>
+
+
+
+
+    <div class="row">
+        <div class="col-sm-12" style="text-align: center;">
+            <h2>Doxuments A La Carte</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-8 col-centered" style="text-align: center;">
+            <p class="lead">
+            Doxuments offers the flexibility of a la carte editing services,
+            custom timelines, and the full range of technical editing services.
+        </div>
+    </div>
+    <div class="v50"></div>
+
+    <div class="row">
+        <div class="col-sm-6 col-centered" style="text-align: center;">
+            <table class="table">
+                <tr>
+
+                    <th style="text-align: center;">Item</th>
+                    <th style="text-align: center;">Name</th>
+                    <th style="text-align: center;">Price</th>
+
+                </tr><tr>
+
+                    <td><span class="badge">Level 4</span></td>
+                    <td>Compositing and Layout Edits</td>
+                    <td><p class="text-success"><b>2 &cent; / word
+                        </b></p></td>
+
+                </tr><tr>
+
+                    <td><span class="badge">Level 3</span></td>
+                    <td>Copyedits</td>
+                    <td><p class="text-success"><b>1 &cent; / word
+                        </b></p></td>
+
+                </tr><tr>
+
+                    <td><span class="badge">Level 2</span></td>
+                    <td>Mathematics and Quantitative Edits</td>
+                    <td><p class="text-success"><b>2 &cent; / word
+                        </b></p></td>
+
+                </tr><tr>
+
+                    <td><span class="badge">Level 1</span></td>
+                    <td>Logical and Technical Edits</td>
+                    <td><p class="text-success"><b>2 &cent; / word
+                        </b></p></td>
+
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!--
+    #####################
+    about doxuments
+    -->
+
+    <a name="a_about"></a>
+    <div class="v300"></div>
+    <hr />
+
+
+
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <h1 class="jumbo"><b>About Doxuments</b></h1>
+        </div>
+    </div>
+
+
+    <div class="v300"></div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12" style="text-align: center;">
+            <h2>Charles Reid, Ph.D.</h2>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-8 col-centered" style="text-align: center;">
+            <p class="lead">
+            In the age of Big Data, Web 2.0, and the Internet of Things,
+            technical editors need serious technical chops.
+            </p>
+        </div>
+    </div>
+
+
+
+    <div class="v50"></div>
+
+
+
+    <div class="row" style="vertical-align: middle;">
+
+        <div class="col-sm-6" style="height: 100%; text-align: center;">
+
+            <img src="{{ SITEURL }}/images/meme.jpg" style="width: 200px;" />
+            {#
+            <div id="divforimageofme">
+            <script type="text/javascript">
+                // use some jquery event binding to make image change on hover
+                var img = $("<img />", {
+                    "class" : "img img-circle",
+                    "id" : "imageofme",
+                    "width" : "300px",
+                    "height" : "300px",
+                    "src" : "{{ SITEURL }}/images/me_left.jpg",
+                    "data-alt-src" : "{{ SITEURL }}/images/me_right.jpg"
+                })
+                .appendTo("div#divforimageofme");
+
+                var sourceSwap = function () {
+                    var $this = $(this);
+                    var newSource = $this.data('alt-src');
+                    $this.data('alt-src', $this.attr('src'));
+                    $this.attr('src', newSource);
+                }
+
+                $('img#imageofme').hover(sourceSwap, sourceSwap);
+            </script>
+            </div>
+            #}
+
+        </div>
+
+        <div class="col-sm-6 vcenter" style="height: 100%; text-align: center; vertical-align: middle;">
+            <p>
+            Charles Reid is a chemical engineering Ph.D. with a breadth of knowledge and experience
+            that enables him to distill both the big picture and important details quickly. 
+            He is practiced in written and oral technical communication for both technical and 
+            general audiences.
+            </p>
+            <p>
+            Charles has worked in industrial, startup, national lab, and academic settings.
+            You can have confidence that Charles will understand your needs and timeline 
+            and will provide you with an outstanding technical editing experience.
+            </p>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!--
+    #####################
+    contact doxuments
+    -->
+
+    <a name="a_contact"></a>
+    <div class="v300"></div>
+    <hr />
+
+
+    <div class="row">
+        <div class="col-md-12" style="text-align: center;">
+            <h1 class="jumbo"><b>Contact Doxuments</b></h1>
+        </div>
+    </div>
+
+
+
+    <div class="v300"></div>
+
+
+
+    <div class="row">
+        <div class="col-sm-12" style="text-align: center;">
+            <h2>Imagine what Doxuments can accomplish for you.</h2>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-sm-8 col-centered" style="text-align: center;">
+            <p class="lead">
+            Contact us today about your project.
+            </p>
+        </div>
+    </div>
+
+
+
+    <div class="row" id="contact">
+
+        <div class="col-sm-4">
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Email</h3>
+                </div>
+                <div class="panel-body">
+                    info@doxuments.com
+                </div>
+            </div>
+
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Twitter</h3>
+                </div>
+                <div class="panel-body">
+                    Tweet at us: <a href="http://twitter.com/doxconsulting">@doxconsulting</a>
+                </div>
+            </div>
+
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Phone</h3>
+                </div>
+                <div class="panel-body">
+                    +1 (888) 998-2832
+                </div>
+            </div>
+            
+            
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Address</h3>
+                </div>
+                <div class="panel-body">
+                    Doxuments Services are provided by<br />
+                    Dox Consulting, LLC <br>
+                    3518 Fremont Avenue North #521<br>
+                    Seattle, WA 98103
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="col-sm-8" style="text-align: center;">
+
+
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Location</h3>
+                </div>
+                <div class="panel-body">
+
+                    <p class="lead contentText">Doxuments is a service of Dox Consulting, LLC, <br />
+                    a Seattle-based company serving customers in all locations.<br>
+                    </p>
+
+                    <img class="img img-circle" src="/images/seattle.png" style="width: 250px; height: 250px;">
+
+                    <p>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="v300"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div><!--container-->
+</div><!--ng-app-->
+</div><!--ng-controller-->
+
+{% endblock %}
+
