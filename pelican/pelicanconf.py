@@ -13,11 +13,12 @@ TIMEZONE = 'America/Los_Angeles'
 DEFAULT_LANG = u'en'
 
 # the theme 
-THEME = 'simple-angular'
+THEME = 'cmr-theme'
 
 
-# -------------------
-# ipython notebooks
+
+# ------------
+# iPython Notebooks:
 
 HOME = os.environ.get('HOME')
 
@@ -27,20 +28,33 @@ PLUGINS = ['liquid_tags','render_math']
 
 MARKUP = ('md')
 
-
 # Don't try to turn HTML files into pages
 READERS = {'html': None}
+
 
 
 # --------------------
 # Templates
 
-
 # template locations 
-EXTRA_TEMPLATES_PATHS = ['angular']
+EXTRA_TEMPLATES_PATHS = ['angular','projects','aboutme','blog']
 
-# template files 
 TEMPLATE_PAGES = {}
+
+# our custom index page
+TEMPLATE_PAGES['index.html'] = 'index.html'
+
+# projects
+TEMPLATE_PAGES['projects.html'] = 'projects/index.html'
+
+# about
+TEMPLATE_PAGES['about.html'] = 'about/index.html'
+
+# consulting
+TEMPLATE_PAGES['consulting.html'] = 'consulting/index.html'
+
+# hello angular world
+TEMPLATE_PAGES['hello.html'] = 'hello/index.html'
 
 
 
@@ -61,23 +75,6 @@ def int_to_month (m_int):
     return d.strftime("%B")
 
 JINJA_FILTERS = {'month_name':int_to_month}
-
-
-
-
-# -------------------------
-# Pages
-
-# our custom index page
-TEMPLATE_PAGES['index.html'] = 'index.html'
-#TEMPLATE_PAGES['dox.css'] = 'dox.css'
-
-
-# hello angular world
-TEMPLATE_PAGES['hello.html'] = 'hello/index.html'
-
-
-
 
 
 
