@@ -10,22 +10,27 @@
 
 {# ----------- content ------------- #}
 {% block content %}
-
 <!--
 <link href="{{ SITEURL }}/projects.css" rel="stylesheet" stype="text/css" />
 -->
-
 <div ng-app="projectsApp">
+    <div ng-controller="projectsController" ng-init="initialize()">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" style="text-align: center;">
 
-    <div ng-controller="HelloController" ng-init="initialize()">
+                    <projectt></projectt>
 
-        <p>Allo Allo, Vjarld!</p>
-    
+                </div>
+            </div>
+        </div>
     </div>
-
 </div>
+
+<div class="v300"></div>
 
 <script type="text/javascript" src="{{ SITEURL }}/projects/projects_modcontrol.js"></script>
 <script type="text/javascript" src="{{ SITEURL }}/projects/projects_sunburst.js"></script>
 
 {% endblock %}
+
