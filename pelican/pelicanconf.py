@@ -36,35 +36,46 @@ READERS = {'html': None}
 # --------------------
 # Templates
 
-# template locations 
-EXTRA_TEMPLATES_PATHS = ['angular','projects','aboutme','writing']
-
+# template stuff 
+EXTRA_TEMPLATES_PATHS = []
 TEMPLATE_PAGES = {}
 
-# our custom index page
+
+
+
+
+# index 
+EXTRA_TEMPLATES_PATHS.append('angular')
 TEMPLATE_PAGES['index.html'] = 'index.html'
 
+# hello angular world
+TEMPLATE_PAGES['hello.html'] = 'hello/index.html'
+
+
 # projects
+EXTRA_TEMPLATES_PATHS.append('projects')
 TEMPLATE_PAGES['projects.html'] = 'projects/index.html'
 TEMPLATE_PAGES['projects.json'] = 'projects/projects.json'
 TEMPLATE_PAGES['projects.css']  = 'projects/projects.css'
 TEMPLATE_PAGES['projects_modcontrol.js'] = 'projects/projects_modcontrol.js'
  
 # about
+EXTRA_TEMPLATES_PATHS.append('about')
 TEMPLATE_PAGES['about.html'] = 'about/index.html'
+TEMPLATE_PAGES['about.css']  = 'about/about.css'
+TEMPLATE_PAGES['about.json'] = 'about/about.json'
+TEMPLATE_PAGES['about_modcontrol.js'] = 'about/about_modcontrol.js'
+
+TEMPLATE_PAGES['auto.html'] = 'about/auto.html'
 
 # consulting
+EXTRA_TEMPLATES_PATHS.append('consulting')
 TEMPLATE_PAGES['consulting.html'] = 'consulting/index.html'
 
-# hello angular world
-TEMPLATE_PAGES['hello.html'] = 'hello/index.html'
-
-
-
-# ---------------------
-# Blaaaaaarg 
-
-# blaaarg
+# writing
+# a.k.a.
+# blaaaaaaaaarg
+EXTRA_TEMPLATES_PATHS.append('writing')
 TEMPLATE_PAGES['writing.html'] = 'writing/index.html'
 
 # time formats for blaaaarg
