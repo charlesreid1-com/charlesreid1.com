@@ -1,0 +1,62 @@
+[
+    {
+        "name" : "Autobiography",
+        "description" : "Just the essentials.",
+        "url" : "/about/auto.html"
+    },
+    {
+        "name" : "Resume",
+        "description" : "The usual.",
+        "url" : "/about/resume.pdf"
+    },
+    {
+        "name" : "Curriculum Vitae",
+        "description" : "The avalanche of trivialities.",
+        "url" : "/about/cv.pdf"
+    },
+    {
+        "name" : "charlesreid1 Wiki",
+        "description" : "I eat my own dogfood! If it's on the wiki, it's because I've found it useful.  I use this wiki to take notes, and MediaWiki makes it easy to build complicated sets of pages fast.",
+        "url" : "/wiki"
+    },
+    {
+        "name" : "charlesreid1 Blog",
+        "description" : "You can check out my writing blog, which covers everything under the sun, lots of technical stuff, lots of Python, and the occaionsal wistful or fun post.",
+        "url" : "/blog"
+    },
+    {
+        "name" : "charlesreid1 Wordpress",
+        "description" : "I maintain a Wordpress site, since Wordpress is a convenient, if overweight, blogging enginge.",
+        "url" : "/wordpress"
+    },
+    {
+        "name" : "LinkedIn",
+        "description" : "Only because I have to.",
+        "url" : "/about/auto.html"
+    },
+    {
+        "name" : "@charlesreid1 on GitHub",
+        "description" : "My GitHub profile contains code for many code projects.",
+        "url" : "http://github.com/charlesreid1"
+    },
+    {
+        "name" : "@charlesreid1 on Twitter",
+        "description" : "I bear absolutely no responsibility for anything that is said here. What was the question?",
+        "url" : "http://twitter.com/charlesreid1"
+    },
+    {
+        "name" : "@charlesreid1 on 500px",
+        "description" : "The absolute best cherry-picked photographs from a hard drive crammed full of photos.",
+        "url" : "http://500px.com/charlesreid1"
+    },
+    {
+        "name" : "",
+        "description" : ".",
+        "url" : "/"
+    },
+    {
+        "name" : "",
+        "description" : ".",
+        "url" : "/"
+    }
+]
