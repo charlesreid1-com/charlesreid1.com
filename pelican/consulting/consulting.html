@@ -13,8 +13,8 @@
 
 <link href="{{ SITEURL }}/consulting/consulting.css" rel="stylesheet" stype="text/css" />
 
-<div ng-app="aboutApp">
-    <div ng-controller="aboutController" ng-init="initialize()">
+<div ng-app="consultingApp">
+    <div ng-controller="consultingController" ng-init="initialize()">
         <div class="container" style="text-align: center;">
             {% include 'consulting_content.html' %}
         </div>
@@ -23,6 +23,6 @@
 
 <div class="v300"></div>
 
-<script type="text/javascript" src="{{ SITEURL }}/constulting/constulting_modcontrol.js"></script>
+<script type="text/javascript" src="{{ SITEURL }}/consulting/consulting_modcontrol.js"></script>
 
 {% endblock %}
