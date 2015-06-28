@@ -30,16 +30,38 @@ console.log(dt());
 
     <table align="center" width="100%">
         <tr>
-            <td style="width: 50%; text-align: right; padding: 20px;">
+            <td id="left">
                 <img class"image" src="http://placehold.it/300x300" />
             </td>
-            <td style="width: 50%; text-align: left; vertical-align: top; padding: 20px;">
+            <td id="right">
                 <h3>[[project.name]]</h3>
                 <p class="lead">[[project.description]]</p>
+                <p><a class="btn btn-jumbo btn-info"    ng-href="[[project.live_url]]">[[project.name]] Live Site</a></p>
+                <p><a class="btn btn-jumbo btn-success" ng-href="[[project.repo_url]]">[[project.name]] Github Repo</a></p>
+                <p>Technologies: <b>[[project.technologies]]</b></p>
             </td>
         </tr>
     </table>
 
 </div><!-- ng-repeat -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

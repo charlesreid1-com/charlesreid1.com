@@ -47,6 +47,7 @@ TEMPLATE_PAGES['index.html'] = 'index.html'
 # projects
 TEMPLATE_PAGES['projects.html'] = 'projects/index.html'
 TEMPLATE_PAGES['projects.json'] = 'projects/projects.json'
+TEMPLATE_PAGES['projects.css']  = 'projects/projects.css'
 TEMPLATE_PAGES['projects_modcontrol.js'] = 'projects/projects_modcontrol.js'
  
 # about
