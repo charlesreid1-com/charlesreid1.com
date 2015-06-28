@@ -37,7 +37,7 @@ READERS = {'html': None}
 # Templates
 
 # template locations 
-EXTRA_TEMPLATES_PATHS = ['angular','projects','aboutme','blog']
+EXTRA_TEMPLATES_PATHS = ['angular','projects','aboutme','writing']
 
 TEMPLATE_PAGES = {}
 
@@ -65,7 +65,7 @@ TEMPLATE_PAGES['hello.html'] = 'hello/index.html'
 # Blaaaaaarg 
 
 # blaaarg
-TEMPLATE_PAGES['blog.html'] = 'blog/index.html'
+TEMPLATE_PAGES['writing.html'] = 'writing/index.html'
 
 # time formats for blaaaarg
 DATE_FORMATS = {'en': '%A %m/%d/%Y',}
