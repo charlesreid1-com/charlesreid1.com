@@ -12,13 +12,26 @@ var hipster_ipsum = function(N,tagname) {
 ng = a.directive('projectt', function() {
 
     function link(scope, element, attr) {
-
-        var something = "something";
-
         var el = element[0];
-        var div = $("<div />").text(something);
-        angular.element(el).append(div);
 
+
+
+
+        // Build a fucking sandcastle
+
+        var div = $("<div />");
+
+        var img = $("<img />", {
+            "src" : "http://placehold.it/100x100",
+            "class" : "image"
+        }).appendTo(div);
+
+
+
+
+
+
+        angular.element(el).append(div);
     }
     return {
         restrict: "E",

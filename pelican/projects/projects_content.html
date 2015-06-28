@@ -1,12 +1,45 @@
-<h1 class="jumbojumbo"><b>
-Projects
-</b></h1>
+<script type="text/javascript">
+function dt() {
+    var currentdate = new Date(); 
+    var datetime = "Last Sync: " + currentdate.getDate() + "/"
+                    + (currentdate.getMonth()+1)  + "/" 
+                    + currentdate.getFullYear() + " @ "  
+                    + currentdate.getHours() + ":"  
+                    + currentdate.getMinutes() + ":" 
+                    + currentdate.getSeconds();
+    return datetime;
+}
+
+//var mdt = dt();
+//var p = $("<p />", {
+//    "class":"lead cosmojumboText"
+//}).text("["+mdt+"]");// An assortment of projects of Charles Reid.");
+//$("h1").append(p);
+</script>
+
+<script type="text/javascript">
+console.log(dt());
+</script>
+
+<h1 class="jumbojumbo"><b>Projects</b></h1>
+<p id="loglead" class="lead cosmojumboText"></p>
 
 <div ng-repeat="project in projectData">
 
     <div class="v150"></div>
 
-    <projectt></projectt>
+    <table align="center" width="100%">
+        <tr>
+            <td style="width: 50%; text-align: right; padding: 20px;">
+                <img class"image" src="http://placehold.it/300x300" />
+            </td>
+            <td style="width: 50%; text-align: left; vertical-align: top; padding: 20px;">
+                <h3>[[project.name]]</h3>
+                <p class="lead">[[project.description]]</p>
+            </td>
+        </tr>
+    </table>
 
 </div><!-- ng-repeat -->
+
 

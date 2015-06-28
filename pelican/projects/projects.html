@@ -15,12 +15,8 @@
 -->
 <div ng-app="projectsApp">
     <div ng-controller="projectsController" ng-init="initialize()">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12" style="text-align: center;">
-                    {% include 'projects_content.html' %}
-                </div>
-            </div>
+        <div class="container" style="text-align: center;">
+            {% include 'projects_content.html' %}
         </div>
     </div>
 </div>
@@ -28,7 +24,6 @@
 <div class="v300"></div>
 
 <script type="text/javascript" src="{{ SITEURL }}/projects/projects_modcontrol.js"></script>
-<script type="text/javascript" src="{{ SITEURL }}/projects/projects_sunburst.js"></script>
 
 {% endblock %}
 
