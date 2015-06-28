@@ -24,7 +24,7 @@ function PController($scope,datafactory) {
     $scope.initialize = function() {
         datafactory.getNestData().then(
             function(data) { 
-                $scope.nestData = data;
+                $scope.projectData = data;
                 console.log(data);
             }
         );
