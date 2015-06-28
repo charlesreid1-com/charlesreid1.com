@@ -9,7 +9,7 @@
     },
     {
         "name" : "Dang Pelican: D3.js + Angular.js",
-        "description" : "Dang Pelican is a barebones Pelican repository with D3.js + Angular.js (Dang) built in. It is plug-and-play for visulization web apps with Python.",
+        "description" : "Dang Pelican is a barebones Pelican repository with D3.js + Angular.js (Dang) built in. It is designed to be plug-and-play for creating reusable D3 visualization components.",
         "date" : "April 2015", 
         "repo_url" : "http://github.com/charlesreid1/dang-pelican-barebones", 
         "technologies" : "Python, Pelican, Javascript, D3.js, Angular.js, Data Visualization"
