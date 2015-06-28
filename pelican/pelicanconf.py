@@ -47,6 +47,7 @@ TEMPLATE_PAGES['index.html'] = 'index.html'
 # projects
 TEMPLATE_PAGES['projects.html'] = 'projects/index.html'
 TEMPLATE_PAGES['projects.json'] = 'projects/projects.json'
+TEMPLATE_PAGES['project.json']  = 'projects/project.json'
 TEMPLATE_PAGES['projects_modcontrol.js'] = 'projects/projects_modcontrol.js'
 TEMPLATE_PAGES['projects_sunburst.js'] = 'projects/projects_sunburst.js'
 
