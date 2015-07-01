@@ -3,6 +3,7 @@
         "name" : "Colorbomb",
         "description" : "Colorbomb is a project that constructs color palettes from photos of graffiti from San Francisco's Mission District. It implements a k-means clustering algorithm in Python to find the color clusters, which form the colors in the palette. These color palettes are used to create map color schemes with Leaflet.js.",
         "date" : "March 2015", 
+        "img" : "colorbomb.png",
         "repo_url" : "http://github.com/charlesreid1/colorbomb", 
         "live_url" : "http://charlesreid1.github.io/colorbomb", 
         "technologies" : "Python, Python Image Library, Javascript, Leaflet.js"
@@ -11,6 +12,7 @@
         "name" : "Dang Pelican: D3.js + Angular.js",
         "description" : "Dang Pelican is a barebones Pelican repository with D3.js + Angular.js (Dang) built in. It is designed to be plug-and-play for creating reusable D3 visualization components.",
         "date" : "April 2015", 
+        "img" : "dangpelican.png",
         "repo_url" : "http://github.com/charlesreid1/dang-pelican-barebones", 
         "technologies" : "Python, Pelican, Javascript, D3.js, Angular.js, Data Visualization"
     },
@@ -18,6 +20,7 @@
         "name" : "Empirical Model Building",
         "description" : "A set of iPython notebooks working through parts of Box and Draper's classic 1986 textbook, 'Empirical Model Building.'",
         "date" : "May 2015", 
+        "img" : "empirical.png",
         "repo_url" : "http://github.com/charlesreid1/empirical-model-building", 
         "technologies" : "Python, iPython, pystatsmodels, matplotlib, Data Visualization, Experimental Design"
     },
@@ -25,71 +28,53 @@
         "name" : "Words Words Words",
         "description" : "A mashup of Python web scraping and HTML processing, Words Words Words color-codes the words in Gutenberg books according to ther root language, using the Online Etymology Dictionary.",
         "date" : "January 2015", 
+        "img" : "www.png",
         "repo_url" : "http://github.com/charlesreid1/empirical-model-building", 
         "technologies" : "Python, BeautifulSoup, Mechanize, Pelican"
     },
     {
         "name" : "California Education Levels",
-        "description" : "",
+        "description" : "Visualizing census data on California's education levels, county-by-county, using D3.js and Leaflet.js. This visualization encourages the user to explore this rich, hierarchical dataset themselves, by using multiple linked maps and charts.",
         "date" : "",
+        "img" : "caeducation.png",
         "repo_url" : "",
         "live_url" : "",
-        "technologies" : ""
-    },
-    {
-        "name" : "California Commutes",
-        "description" : "",
-        "date" : "",
-        "repo_url" : "",
-        "live_url" : "",
-        "technologies" : ""
+        "technologies" : "Javascript, D3.js, Leaflet.js, GitHub Pages, Python, Pelican"
     },
     {
         "name" : "Watergate Twitter Bot",
         "description" : "",
         "date" : "",
-        "repo_url" : "",
-        "live_url" : "",
+        "img" : "watergate.png",
+        "repo_url" : "http://github.com/charlesreid1/watergate",
+        "live_url" : "http://charlesreid1.github.io/watergate",
         "technologies" : ""
     },
     {
         "name" : "Ginsberg Twitter Bot Flock",
         "description" : "",
         "date" : "",
-        "repo_url" : "",
-        "live_url" : "",
+        "img" : "ginsberg.png",
+        "repo_url" : "http://github.com/charlesreid1/ginsberg",
+        "live_url" : "http://charlesreid1.github.io/ginsberg",
         "technologies" : ""
     },
     {
         "name" : "Milton Twitter Bot Flock",
         "description" : "",
         "date" : "",
-        "repo_url" : "",
-        "live_url" : "",
+        "img" : "milton.png",
+        "repo_url" : "http://github.com/charlesreid1/milton",
+        "live_url" : "http://charlesreid1.github.io/milton",
         "technologies" : ""
     },
     {
         "name" : "Apollo Twitter Bot Flock",
         "description" : "",
         "date" : "",
-        "repo_url" : "",
-        "live_url" : "",
-        "technologies" : ""
-    },
-    {
-        "name" : "Rainbow Mind Machine",
-        "description" : "",
-        "date" : "",
-        "repo_url" : "",
-        "live_url" : "",
-        "technologies" : ""
-    },
-    {
-        "name" : "Dymouse",
-        "description" : "",
-        "date" : "",
-        "repo_url" : "",
-        "live_url" : "",
+        "img" : "apollo.png",
+        "repo_url" : "http://github.com/charlesreid1/apollobotflock",
+        "live_url" : "http://charlesreid1.github.io/apollobotflock",
         "technologies" : ""
     }
 ]

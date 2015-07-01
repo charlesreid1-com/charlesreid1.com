@@ -33,6 +33,15 @@ READERS = {'html': None}
 
 
 
+
+# --------------------
+# Static stuff
+
+STATIC_PATHS = ['img']
+
+
+
+
 # --------------------
 # Templates
 

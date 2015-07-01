@@ -21,6 +21,32 @@ function dt() {
 <h1 class="jumbojumbo"><b>About</b></h1>
 <p id="loglead" class="lead cosmojumboText"></p>
 
+
+
+    <!--
+        put my own biography, since I can't get angular to understand a conditional 
+    -->
+
+    <div class="v150"></div>
+
+    <table align="center" width="100%">
+        <tr>
+            <td id="left">
+                <img class"image" src="http://placehold.it/200x200" />
+            </td>
+            <td id="right">
+
+                <h3>Biography</h3>
+
+                <p class="lead">Something something something complete.</p>
+
+            </td>
+        </tr>
+    </table>
+
+
+
+
 <div ng-repeat="about in aboutData">
 
     <div class="v150"></div>
@@ -28,7 +54,10 @@ function dt() {
     <table align="center" width="100%">
         <tr>
             <td id="left">
+                <!--
                 <img class"image" src="http://placehold.it/50x50" />
+                -->
+                <img class="image" width="300px" ng-src="{{ SITEURL }}/img/[[about.img]]" />
             </td>
             <td id="right">
 
@@ -36,7 +65,10 @@ function dt() {
 
                 <p class="lead">[[about.description]]</p>
 
-                <p><a class="btn btn-jumbo btn-info" ng-href="[[about.url]]">[[about.name]]</a></p>
+                <!-- doesn't work -->
+                <div ng-switch on="[[about.url]]">
+                    <p><a class="btn btn-jumbo btn-info" ng-href="[[about.url]]">[[about.name]]</a></p>
+                </div>
 
             </td>
         </tr>
