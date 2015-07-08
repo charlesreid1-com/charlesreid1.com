@@ -74,6 +74,7 @@ is that the probability of heads-then-tails is equal to
 tails-then-heads.
 
 <img 
+style="background: #aaa; padding: 20px;"
 src="/img/CoinFlip.png">
 
 As von Neumann notes, this increases the cost of 
