@@ -1100,7 +1100,8 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #ffffff;
+  /*color: #ffffff;*/
+  color: #55acee;
   text-decoration: none;
 }
 a:hover,
@@ -1151,7 +1152,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #1c1e22;
+  border-top: 1px solid lightgray;
 }
 .sr-only {
   position: absolute;
