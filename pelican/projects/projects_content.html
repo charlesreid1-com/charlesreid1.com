@@ -40,8 +40,12 @@ console.log(dt());
             <td id="right">
                 <h3>[[project.name]]</h3>
                 <p class="lead">[[project.description]]</p>
-                <p><a class="btn btn-jumbo btn-info"    ng-href="[[project.live_url]]">[[project.name]] Live Site</a></p>
-                <p><a class="btn btn-jumbo btn-success" ng-href="[[project.repo_url]]">[[project.name]] Github Repo</a></p>
+                <span ng-if="project.live_url">
+                    <p><a class="btn btn-jumbo btn-info"    ng-href="[[project.live_url]]">[[project.name]] Live Site</a></p>
+                </span>
+                <span ng-if="project.repo_url">
+                    <p><a class="btn btn-jumbo btn-success" ng-href="[[project.repo_url]]">[[project.name]] Github Repo</a></p>
+                </span>
                 <p>Technologies: <b>[[project.technologies]]</b></p>
             </td>
         </tr>

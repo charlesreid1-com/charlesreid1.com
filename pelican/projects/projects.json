@@ -29,31 +29,42 @@
         "description" : "A mashup of Python web scraping and HTML processing, Words Words Words color-codes the words in Gutenberg books according to ther root language, using the Online Etymology Dictionary.",
         "date" : "January 2015", 
         "img" : "www.png",
-        "repo_url" : "http://github.com/charlesreid1/empirical-model-building", 
+        "live_url" : "http://charlesreid1.github.io/wordswordswords",
+        "repo_url" : "http://github.com/charlesreid1/wordswordswords", 
         "technologies" : "Python, BeautifulSoup, Mechanize, Pelican"
     },
     {
         "name" : "California Education Levels",
         "description" : "Visualizing census data on California's education levels, county-by-county, using D3.js and Leaflet.js. This visualization encourages the user to explore this rich, hierarchical dataset themselves, by using multiple linked maps and charts.",
-        "date" : "",
+        "date" : "February 2014",
         "img" : "caeducation.png",
-        "repo_url" : "",
-        "live_url" : "",
+        "repo_url" : "http://github.com/charlesreid1/a-shrubbery",
+        "live_url" : "http://charlesreid1.github.io/a-shrubbery/educationca/",
         "technologies" : "Javascript, D3.js, Leaflet.js, GitHub Pages, Python, Pelican"
     },
     {
         "name" : "Watergate Twitter Bot",
-        "description" : "",
-        "date" : "",
+        "description" : "A twitter bot that generates random phone dialogue between Nixon and his associates using a random text generation algorithm trained with White House tapes transcripts.",
+        "date" : "January 2014",
         "img" : "watergate.png",
         "repo_url" : "http://github.com/charlesreid1/watergate",
         "live_url" : "http://charlesreid1.github.io/watergate",
         "technologies" : ""
     },
     {
-        "name" : "Ginsberg Twitter Bot Flock",
+        "name" : "Apollo Twitter Bot Flock",
         "description" : "",
-        "date" : "",
+        "description" : "A flock of twitter bots that generate random Apollo mission radio dialogue between astronauts and Mission Control, using a random text generation algorithm trained with transcripts of the Apollo missions' radio logs. (Apollo 11 and Apollo 12 are done.)",
+        "date" : "January 2014",
+        "img" : "apollo.png",
+        "repo_url" : "http://github.com/charlesreid1/apollobotflock",
+        "live_url" : "http://charlesreid1.github.io/apollobotflock",
+        "technologies" : ""
+    },
+    {
+        "name" : "Ginsberg Twitter Bot Flock",
+        "description" : "A flock of twitter bots, each tweeting Allen Ginsberg poems in perpetuity.",
+        "date" : "January 2014",
         "img" : "ginsberg.png",
         "repo_url" : "http://github.com/charlesreid1/ginsberg",
         "live_url" : "http://charlesreid1.github.io/ginsberg",
@@ -61,20 +72,11 @@
     },
     {
         "name" : "Milton Twitter Bot Flock",
-        "description" : "",
-        "date" : "",
+        "description" : "A flock of twitter bots, each tweeting one of the twelve books of John Milton's epic poem Paradise Lost in perpetuity.",
+        "date" : "January 2014",
         "img" : "milton.png",
         "repo_url" : "http://github.com/charlesreid1/milton",
         "live_url" : "http://charlesreid1.github.io/milton",
-        "technologies" : ""
-    },
-    {
-        "name" : "Apollo Twitter Bot Flock",
-        "description" : "",
-        "date" : "",
-        "img" : "apollo.png",
-        "repo_url" : "http://github.com/charlesreid1/apollobotflock",
-        "live_url" : "http://charlesreid1.github.io/apollobotflock",
         "technologies" : ""
     }
 ]
