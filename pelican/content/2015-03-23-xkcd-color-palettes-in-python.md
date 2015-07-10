@@ -2,7 +2,8 @@
 title: XKCD Color Palettes in Python
 date: 2015-03-23 19:59:48 -0700
 comments: true
-categories: 
+category: Personal
+tags: [programming, python, colors]
 ---
 Lately, I've been diving into colors - colors for plots, colors for maps,
 and the effect of color on perception.

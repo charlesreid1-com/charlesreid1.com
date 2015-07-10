@@ -1,9 +1,9 @@
 ---
-layout: post
 title: Fair Tosses with Unfair Coins
 date: 2015-03-24 20:35:16 -0700
 comments: true
-categories: 
+category: Personal
+tags: [programming, algorithms, math, science]
 ---
 
 I came across the following puzzle while perusing code interview questions,
