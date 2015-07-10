@@ -1,34 +1,89 @@
-{% extends 'base.html' %}
-{% block title %}Blog - {{ SITENAME }}{% endblock %}
-{% block content %}
 
-<div class="container">
+<hr/ >
 
-    <div class="row">
-        <div class="col-md-12 col-centered" style="text-align: center;">
-            <div class="cosmojumbo">
-                <h1 class="jumbojumbo"><b>charlesreid1: article</b></h1>
-                <p>
-                    <a href="#a_start" class="btn btn-primary index-btn">Start Reading&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-down"></i></a>
-                    <a href="#a_archive" class="btn btn-primary index-btn">Visit the Archives&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-right"></i></a>
+<header>
+<div class="row">
+    <!--
+    <div class="col-md-12" style="text-align: center;">
+    -->
+    <div class="col-md-12">
+
+        <div class="headtext" style="text-align: center;">
+            <h1 class="jumbo"><b>
+                {{ article.title|striptags }}
+            </b></h1>
+        
+            <p class="lead">
+                Posted 
+                <time datetime="{{ article.date.isoformat() }}" pubdate>{{ article.locale_date }}</time>
+                in 
+                <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
                 </p>
-            </div>
+            <p>
+            <span style="font-size: 14px">
+                <a href="{{ SITEURL }}/{{ article.url }}">permalink</a>
+            </span>
+            </p>
         </div>
+
     </div>
+</div>
+</header>
 
-    <a name="a_start"></a>
-    <div class="v150"></div>
+<div class="v50"></div>
 
-    {% include '_includes/short_article.html' %}
+<div class="row">
+    <div class="col-md-8 col-centered" style="text-align: left;">
 
+        {% if index %}
+            <div class="entry-content">{{ article.summary }}</div>
+            {% if article.summary != article.content %}
+            <footer>
+                <a rel="full-article" href="{{ SITEURL }}/{{ article.url }}">Read On &crarr;</a>
+            </footer>
+            {% endif %}
 
-    <archives>
-        {% include '_includes/blog_archive_minipage.html' %}
-    </archives>
-                        
+            <!--
+            <div class="entry-content">{{ article.content }}</div>
+            -->
 
+        {% else %}
 
+            <div class="entry-content">{{ article.summary }}</div>
+            {% if article.summary != article.content %}
+            <footer>
+                <a rel="full-article" href="{{ SITEURL }}/{{ article.url }}">Read On &crarr;</a>
+            </footer>
+            {% endif %}
+        {% endif %}
+
+    </div>
 </div>
 
-{% endblock %}
+
+
+<div class="v50"></div>
+
+
+
+<div class="row">
+    <div class="col-md-8 col-centered" style="text-align: left;">
+
+        <div class="tags">
+            <p>Tags:&nbsp;&nbsp;&nbsp;
+            {% if article.tags %}
+                {% for tag in article.tags %}
+                    <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>
+                    &nbsp;&nbsp;
+                {% endfor %}
+            {% endif %}
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="v300"></div>
+
 

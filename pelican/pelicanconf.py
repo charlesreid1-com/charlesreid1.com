@@ -93,6 +93,10 @@ TEMPLATE_PAGES['consulting_modcontrol.js']  = 'consulting/consulting_modcontrol.
 EXTRA_TEMPLATES_PATHS.append('writing')
 TEMPLATE_PAGES['writing.html'] = 'writing/index.html'
 
+
+# summary length
+SUMMARY_MAX_LENGTH = 100
+
 # time formats for blaaaarg
 DATE_FORMATS = {'en': '%A %m/%d/%Y',}
 

@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-12 col-centered" style="text-align: center;">
             <div class="cosmojumbo">
-                <h1 class="jumbojumbo"><b>charlesreid1: writing</b></h1>
+                <h1 class="jumbojumbo"><b>Writing</b></h1>
                 <p>
                     <a href="#a_start" class="btn btn-primary index-btn">Start Reading&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-down"></i></a>
                     <a href="#a_archive" class="btn btn-primary index-btn">Visit the Archives&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-circle-right"></i></a>
@@ -21,8 +21,9 @@
 
     {% if articles %}
         {% for article in articles %}
+
             <article>
-                {% include '_includes/article.html' %}
+                {% include '_includes/short_article.html' %}
             </article>
 
         {% endfor %}
@@ -31,7 +32,6 @@
     <archives>
         {% include '_includes/blog_archive_minipage.html' %}
     </archives>
-                        
 
 </div>
 

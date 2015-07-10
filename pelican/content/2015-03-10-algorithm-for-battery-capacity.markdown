@@ -3,7 +3,7 @@ title: Algorithm for Battery Capacity
 date: 2015-03-10 20:53:59 -0700
 comments: true
 category: Personal
-tags: [programming, algorithms, math, science]
+tags: programming, algorithms, math, science
 ---
 From [this book](http://elementsofprogramminginterviews.com/sample/):
 
