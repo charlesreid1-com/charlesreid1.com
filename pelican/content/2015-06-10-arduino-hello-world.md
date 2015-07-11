@@ -9,7 +9,10 @@ tags: programming, visual, arduino, microcontrollers, science, electricity
 This tutorial gives a rundown of a simple "Hello World" circuit with Arduino,
 presented in a way that caters to visual thinkers.
 
-`![Arduino Hello World Image](/img/HelloWorld.png)`
+<img
+width="500px" 
+alt="Arduino Hello World"
+src="/img/HelloWorld.jpg">
 
 Before we dive into our Arduino hello world circuit, let's talk about power lines.
 
@@ -142,36 +145,96 @@ without tearing apart the entire system.
 
 Breadboards provide a way of rapidly building prototypes to work out
 our final circuit layout. They're pretty simple, and are arranged to provide
-groups of holes, designed for pins and wires, that are connected together.
+groups of holes, designed for pins and wires, that are connected together
+on a single "bus" (a piece of conducting metal) so that they are all at 
+the same voltage. 
 
-+ -   o o o o o o   o o o o o o   + -
+<img
+width="500px" 
+alt="Plain Breadboard"
+src="/img/Breadboard.jpg">
 
-The breadboard has two differnet kinds of groups: groups of holes with a voltage drop
-Within each group of holes, all holes connect to the same bus, or piece of conducting metal.
+The left and right sides of the board have positive and negative buses.
+These are convenient because as long as you connect one hole in the plus 
+column to a power source, and one hole in the minus column to a ground,
+you can use the entire column of pluses and minuses as a power source.
 
+The other group of holes, marked with letters and numbers, are groups of holes
+connected by horizontal buses. This means that any wires connected to a given row
+will all be at the same voltage.
 
+If we plug one end of a pair of red and black wires into a 5 volt power source 
+(like an Arduino) and its ground, respectively, then our breadboard would 
+look like this:
 
+<img
+width="500px" 
+alt="Breadboard With Power"
+src="/img/BreadboardPower.jpg">
 
+Under this configuration, the entirety of the plus and minus buses on the left side 
+of the breadboard how have a 5 volt potential across them. Now, we can connect any hole
+on the positive bus to any bus in the center of the breadboard, 
+and the entire horizontal row on that side will be at the same voltage.
 
+(Note that the right side of the breadboard is isolated, so we could either connect
+the plus and minus buses to another power source, or connect them to the plus and minus
+buses on the left side of the board.)
 
-In practice, we have to explain the resistor and breadboard
+# Assembling the Circuit
 
-(Not talking about difference between voltage and current - too big a topic, and hard to use the light to explain.)
+## The Setup 
 
+Based on our discussion of LEDs and resistors, the first thing we'll want to do 
+is check the voltage rating of our LED. We'll find most LEDs are rated for a maximum of 1-3 volts
+(it depends on the manufacturer; sometimes different LED colors indicate the maximum voltage).
 
-## The Resistors
+Using some math that we won't go into here (Ohm's Law),
+we can determine that a resistance of anywhere between 200 ohms and 1 kilo-ohm
+will be sufficient to keep from frying our LED.
+Now, we can go on down to the resistor store and buy ourselves the right size resistor.
 
-What's the limiting factor? the voltage rating of the LED
+## Resistors in Series
 
-Thinking about devices and their voltage limitations
+But what if, like the aspiring hackers we are, we're too lazy to go to the 
+resistor store, and we want to use our materials on hand instead?
+Let's say all we have is a pack of 180 ohm resistors. Too small to 
+work. Bummer, guess we're out of luck.
 
-## The Breadboard: Building the Circuit
+But wait! We're not out of luck at all! The beauty of bread boards is that it's really easy
+to add new components - like more resistors. And when resistors are put in series, their resistance
+is additive (revisit the analogy of water flowing through a pipe to convince yourself
+that this is true). While there are mathematical reasons for this, 
+they are beyond the scope of what we're covering here.
+All we really need to know is that we can put two resistors in series, 
+and their resistance is additive. So we can put two 180 ohm resistors in series,
+and get the equivalent of a 360 ohm resistor. Laziness wins again!
 
-How breadboards are organized
+Now let's get to the circuit diagram!
 
-How we design the circuit diagram
+## Diagramming the Circuit
 
-How we turn that diagram into a breadboard
+Now we can construct our circuit. We have 5 volts starting at the Arduino. 
+Those electrons travel through the circuit to the two resistors,
+through the two resistors (where their voltage drops), 
+and into the LED, where the lowered voltage will light up our LED.
+(If we only added one resistor, the voltage would be too high, 
+and we would fry our LED.)
+
+Here is a stylized circuit diagram that shows our "Hello World" circuit:
+
+<img
+width="500px" 
+alt="Hello World Circuit Diagram With Power And Connection"
+src="/img/BreadboardPowerConnection_dia.jpg">
+
+Converting this to a breadboard design is straightforward, 
+although it will (inevitably) look different:
+
+<img
+width="500px" 
+alt="Hello World Breadboard With Power And Connection"
+src="/img/BreadboardPowerConnection_bb.jpg">
 
 ## Building the Circuit
 
