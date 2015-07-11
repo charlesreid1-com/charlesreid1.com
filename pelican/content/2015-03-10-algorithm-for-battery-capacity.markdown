@@ -5,6 +5,7 @@ comments: true
 category: Personal
 tags: programming, algorithms, math, science
 ---
+
 From [this book](http://elementsofprogramminginterviews.com/sample/):
 
 **A robot needs to travel along a path that includes several ascents and descents. When

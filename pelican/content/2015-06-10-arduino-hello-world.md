@@ -1,8 +1,8 @@
 ---
 title: Arduino for Visual Thinkers - Hello World!
-date: 2015-03-10 20:53:59 -0700
+date: 2015-06-10 20:53:59 -0700
 comments: true
-category: Personal
+category: InternetOfThings
 tags: programming, visual, arduino, microcontrollers, science, electricity
 ---
 
@@ -173,12 +173,12 @@ alt="Breadboard With Power"
 src="/img/BreadboardPower.jpg">
 
 Under this configuration, the entirety of the plus and minus buses on the left side 
-of the breadboard how have a 5 volt potential across them. Now, we can connect any hole
-on the positive bus to any bus in the center of the breadboard, 
-and the entire horizontal row on that side will be at the same voltage.
+of the breadboard now have a 5 volt potential across them. Now, we can connect any hole
+on the positive bus to any hole in the center of the breadboard (the lettered columns), 
+and all the holes on the horizontal row containing that hole will be at the same voltage.
 
-(Note that the right side of the breadboard is isolated, so we could either connect
-the plus and minus buses to another power source, or connect them to the plus and minus
+(Note that the left and right sides of the breadboard are isolated, so we could either connect
+the plus and minus buses on the right side to another power source, or connect them to the plus and minus
 buses on the left side of the board.)
 
 # Assembling the Circuit
@@ -201,14 +201,17 @@ resistor store, and we want to use our materials on hand instead?
 Let's say all we have is a pack of 180 ohm resistors. Too small to 
 work. Bummer, guess we're out of luck.
 
-But wait! We're not out of luck at all! The beauty of bread boards is that it's really easy
-to add new components - like more resistors. And when resistors are put in series, their resistance
+But wait! We're not out of luck at all! 
+The beauty of bread boards is that it's really easy to add new components - like more resistors. 
+And the beauty of resistors is that when resistors are put in series, their resistance
 is additive (revisit the analogy of water flowing through a pipe to convince yourself
 that this is true). While there are mathematical reasons for this, 
 they are beyond the scope of what we're covering here.
 All we really need to know is that we can put two resistors in series, 
-and their resistance is additive. So we can put two 180 ohm resistors in series,
-and get the equivalent of a 360 ohm resistor. Laziness wins again!
+and their resistance is additive. When we put two 180 ohm resistors in series,
+we get the equivalent of a 360 ohm resistor. 
+
+That's good news - it means we can be lazy!
 
 Now let's get to the circuit diagram!
 
@@ -226,7 +229,7 @@ Here is a stylized circuit diagram that shows our "Hello World" circuit:
 <img
 width="500px" 
 alt="Hello World Circuit Diagram With Power And Connection"
-src="/img/BreadboardPowerConnection_dia.jpg">
+src="/img/HelloWorldPowerConnections_dia.jpg">
 
 Converting this to a breadboard design is straightforward, 
 although it will (inevitably) look different:
@@ -234,16 +237,8 @@ although it will (inevitably) look different:
 <img
 width="500px" 
 alt="Hello World Breadboard With Power And Connection"
-src="/img/BreadboardPowerConnection_bb.jpg">
+src="/img/HelloWorldPowerConnections_bb.jpg">
 
-## Building the Circuit
+# To Be Continued
 
-Then we have to explain the construction of the circuit - the breadboard
-
-
-
-# Conclusion
-
-
-
-
+Check back soon for the wrap-up...

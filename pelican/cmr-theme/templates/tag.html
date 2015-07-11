@@ -18,12 +18,9 @@
 
     <div>
 
-        {#
         {% for article in articles_page.object_list %}
-            {% include '_includes/article.html' %}
-            {% include 'article.html' %}
+            {% include '_includes/short_article.html' %}
         {% endfor %}
-        #}
 
     </div>
 
