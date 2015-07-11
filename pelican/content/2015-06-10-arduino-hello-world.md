@@ -237,7 +237,7 @@ although it will (inevitably) look different:
 <img
 width="500px" 
 alt="Hello World Breadboard With Power And Connection"
-src="/img/HelloWorldPowerConnections_bb.jpg">
+src="/img/HelloWorldPowerConnections_bb.png">
 
 # To Be Continued
 
