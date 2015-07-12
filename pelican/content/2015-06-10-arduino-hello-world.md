@@ -262,9 +262,20 @@ and we would fry our LED.)
 Here is a stylized circuit diagram that shows our "Hello World" circuit:
 
 <img
-width="500px" 
+height="400px" 
 alt="Hello World Circuit Diagram With Power And Connection"
 src="/img/HelloWorldPowerConnections_dia.jpg">
+
+It is absolutely critical to understand the path that electrons take through the system.
+The circuit always begins at the source of voltage. The direction the circuit travels 
+is from higher voltage to lower voltage, or to the ground. In our diagram, the circuit
+starts at the red wire connected to the Arduino Nano. The electrons travel through the 
+circuit and toward the Arduino Nano's ground pin. 
+
+(The final leg of the circuit, the black wire connecting the Arduino's ground 
+to a "universal" ground, is not actually implemented on the breadboard; it is 
+part of the Arduino's power cable. That way, we don't have to worry about whether the 
+Arduino's ground pin is actually grounded.)
 
 Converting this to a breadboard design is straightforward, 
 although it will (inevitably) look different:
@@ -274,6 +285,60 @@ width="500px"
 alt="Hello World Breadboard With Power And Connection"
 src="/img/HelloWorldPowerConnections_bb.png">
 
-# To Be Continued
+(Note that the funny arrangement of LED legs is just a matter of convention,
+the drawing program draws LEDs right-to-left while our circuit is laid out 
+left-to-right.)
 
-Check back soon for the wrap-up...
+The breadboard uses a red and black wire to connect the Arduino's positive and negative pins
+to the breadboard's positive and negative buses. The yellow wires then connect the positive 
+voltage bus to the resistors, then to the LED, and finally to the ground, giving the electrons
+a complete path that they can follow.
+
+Now compare all of these with a real photo of the Hello World circuit:
+
+<img
+width="500px" 
+alt="Hello World Photo With Power And Connection"
+src="/img/HelloWorldPowerConnections_photo.jpg">
+
+You should be able to recognize immediately the red and black wires,
+connecting from the Arduino's positive and ground pins, to the breadboard's bus.
+The first yellow wire connects the positive bus to the resistors, then to the LED,
+and the green wire connects the LED to ground, giving the electrons a complete path 
+that they can follow.
+
+# Stay Tuned for Code
+
+You may find it strange that this post does not contain 
+a single line of code. In fact, that is intentional:
+Arduino microcontrollers are complicated devices,
+so it's important to tackle one thing at a time,
+instead of trying to introduce Arduino with a 
+complicated example consisting of many moving parts
+(not literally).
+
+The circuit does not utilize any code, because the circuit
+is connected to the Arduino's 5 volt pin, which is always
+at 5 volts, so long as the microcontroller is plugged in.
+So really, there's nothing to explore (yet).
+
+We have a lot left to discuss, but for now, 
+we've covered plenty. 
+
+First, we introduced circuits by talking about voltage,
+the principle concept in circuit design. 
+We introduced the fluid flow analogy to help give 
+the reader an intuition pump for thinking about voltage.
+
+We then covered the details of the Hello World
+circuit itself. We talked about what role the resistors 
+play - and the role that resistance in general plays.
+We covered the details of the LED. 
+
+Finally, and importantly, we introduced various 
+visual notation for describing circuits to the reader.
+
+In future posts, we will expand on each of these concepts,
+fill in missing details, and cover other key topics,
+like current and its relationship to voltage.
+
