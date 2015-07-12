@@ -2,6 +2,10 @@
  * Custom CSS styles go here.
  */
 
+hr {
+    text-align: center;
+    width: 100px;
+}
 footer {
     margin-bottom: 50px;
 }
