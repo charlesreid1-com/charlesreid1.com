@@ -18,10 +18,10 @@
         "url" : "/wiki"
     },
     {
-        "name" : "charlesreid1 Blog",
-        "description" : "You can check out my writing blog, which covers everything under the sun, lots of technical stuff, lots of Python, and the occaionsal wistful or fun post.",
+        "name" : "charlesreid1 Writing",
+        "description" : "You can check out my writing, which covers everything under the sun, lots of technical stuff, lots of Python, and the occaionsal wistful or fun post.",
         "img" : "blog.png",
-        "url" : "/blog"
+        "url" : "/writing"
     },
     {
         "name" : "charlesreid1 Wordpress",
@@ -33,7 +33,7 @@
         "name" : "LinkedIn",
         "description" : "Only because I have to.",
         "img" : "linkedin.png",
-        "url" : "/about/auto.html"
+        "url" : "https://www.linkedin.com/in/charlesmartinreid"
     },
     {
         "name" : "@charlesreid1 on GitHub",
