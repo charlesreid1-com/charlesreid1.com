@@ -71,6 +71,10 @@ all electrons flow toward ground. Think of it as a giant sea, with an infinite
 capacity for electrons, whose charge is always neutral, and whose potential 
 never changes.
 
+In fact, in hydraulics the term for the amount of potential available is 
+"pressure head." A pipe of water raised 10 feet off the ground is said to 
+have "10 feet of head."
+
 # The Hello World Circuit
 
 Now that we've covered voltage in general terms, let's talk about how voltage works 
@@ -101,31 +105,62 @@ and could fry our component. So we also need to think about how to modify the vo
 
 Let's explore the fluid flow analogy a bit. We can't change the elevation of our 
 water circuit - that's a given, just like the available voltage on the Arduino.
-But we can add an extra segment of pipe upstream of our discharge point 
-(our valve, powering the water wheel). This will put it at a lower elevation than 
-the rest of the circuit. Essentially we waste some of the potential energy available to us
-in the water in order to lower it below the rest of the circuit. 
+But we can add an extra segment of pipe before our valve, one that drops the valve down
+to a lower elevation and puts a bend in the pipe before it gets to the valve.
 
 ```
-(High voltage)
-  |
-  |
-  |\
-  |  \ 
-  |    \ 
-  |     (Resistor waste)
-  |
-(Low voltage)
+(High Head/Voltage) ------------+------------
+                                |
+                                |
+                                |
+                                |
+                                |
+(Low Head/Voltage)              +---(Valve)
+                                       .
+                                       .
+                                       .
+                                       .
+(Ground)                               .
 ```
+
+By lowering the valve, we have lowered the amount of head available at the valve
+when we open it. Also note that the energy we spent raising the water to its original
+elevation is wasted when we lower the potential.
+
 
 ## The Resistors
 
 We can use resistors as components in any circuit to reduce the voltage before we 
 run electrons through other components. 
-Just as adding a segment of pipe before our valve in our water circuit lets us waste 
-some gravitational potential energy, 
-adding resistors before our LED lets us waste some electrical potential energy,
-helping us lower the potential energy in our circuit.
+Just as adding a segment of pipe before our valve in our water circuit lets bleed off
+some gravitational potential energy, adding resistors before our LED lets us 
+bleed off some electrical potential energy, lowering the voltage drop
+across our LED component.
+
+A small resistor would reduce the voltage slightly:
+
+```
+(High Elevation/Voltage) -------+
+                                |
+(Lower Elevation/Voltage)       +-------
+
+
+
+
+(Ground)                                .
+```
+
+While a large resistor would reduce the voltage significantly:
+
+```
+(High Elevation/Voltage) -------+
+                                |
+                                |
+                                |
+                                |
+(Low Elevation/Voltage)         +-------
+(Ground)                                .
+```
 
 ## The Breadboard
 
