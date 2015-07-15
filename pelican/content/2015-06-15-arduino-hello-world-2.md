@@ -1,8 +1,9 @@
 ---
-title: Arduino for Visual Thinkers - Hello World!
-date: 2015-06-10 20:53:59 -0700
+title: Arduino for Visual Thinkers - Hello World from Nano, Leonardo, and Pi!
+date: 2015-06-15 11:09:00 -0700
 category: InternetOfThings
-tags: programming, visual, arduino, arduino nano, microcontrollers, science, electricity
+tags: programming, visual, arduino, arduino nano, arduino leonardo, raspberry pi, microcontrollers, science, electricity
+status: draft 
 ---
 
 This tutorial gives a rundown of a simple "Hello World" circuit with Arduino,

@@ -1,7 +1,6 @@
 ---
 title: XKCD Color Palettes in Python
 date: 2015-03-23 19:59:48 -0700
-comments: true
 category: Personal
 tags: programming, python, colors
 ---
