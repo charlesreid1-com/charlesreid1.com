@@ -299,6 +299,17 @@ src="/img/arduino20150610/bb_HelloWorldPowerConnections.png">
 the drawing program draws LEDs right-to-left while our circuit is laid out 
 left-to-right.)
 
+The long, or bent, leg of the LED is the positive side. That's the side
+that connects with the resistors. 
+
+The short leg of the LED is the negative side. That's the side that hooks up
+to the ground.
+
+<img
+height="400px" 
+alt="LED Diagram with Positive and Negative Labeled"
+src="/img/arduino20150610/diagram_LED.png">
+
 The breadboard uses a red and black wire to connect the Arduino's positive and negative pins
 to the breadboard's positive and negative buses. The yellow wires then connect the positive 
 voltage bus to the resistors, then to the LED, and finally to the ground, giving the electrons
@@ -307,7 +318,7 @@ a complete path that they can follow.
 Here's how this maps onto the real Hello World circuit:
 
 <img
-width="500px" 
+width="800px"
 alt="Parallel Hello World Photograph Circuit Diagram"
 src="/img/arduino20150610/diagram_HelloWorldPowerConnectionsParallel.png">
 
@@ -322,17 +333,16 @@ Here's a picture of the finished circuit:
 <img
 width="500px" 
 alt="Hello World Photograph"
-src="/img/arduino20150610/photo_HelloWorldPowerConnectionsParallel.jpg">
+src="/img/arduino20150610/photo_HelloWorldPowerConnections.jpg">
 
 # Stay Tuned for Code
 
 You may find it strange that this post does not contain 
-a single line of code. In fact, that is intentional:
+a single line of code. In fact, that is intentional!
+This post keeps things simple, by talking about the circuitry
+independent of any microcontroller programming.
 Arduino microcontrollers are complicated devices,
-so it's important to tackle one thing at a time,
-instead of trying to introduce Arduino with a 
-complicated example consisting of many moving parts
-(not literally).
+so it's important to tackle one thing at a time.
 
 The circuit does not utilize any code, because the circuit
 is connected to the Arduino's 5 volt pin, which is always
