@@ -2,6 +2,14 @@
  * Custom CSS styles go here.
  */
 
+img {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  height: auto;
+}
+
 hr {
     text-align: center;
     width: 100px;

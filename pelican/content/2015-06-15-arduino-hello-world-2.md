@@ -3,13 +3,37 @@ title: Arduino for Visual Thinkers - Hello World from Nano, Leonardo, and Pi!
 date: 2015-06-15 11:09:00 -0700
 category: InternetOfThings
 tags: programming, visual, arduino, arduino nano, arduino leonardo, raspberry pi, microcontrollers, science, electricity
-status: draft 
+REMOVEME_status: draft 
 ---
 
 <img
 width="500px" 
-alt="Arduino Hello World"
-src="/img/HelloWorld.jpg">
+class="center-block img-responsive"
+alt="Arduino Hello World on a Pi"
+src="/img/arduino20150615/photo_HelloWorld_Pi.jpg">
+
+Let's revisit our [original Arduino Hello World walkthrough](charlesreid1.com/arduino-for-visual-thinkers-hello-world.html), 
+but where we were using an Arduino Nano last time, this time we'll 
+build the same circuit on a Leonardo and a Raspberry Pi.
+
+Again, we're keeping it dead simple, to minimize the number of concepts you need to juggle in your brain.
+What we're doing is building a circuit that uses the Arduino or Pi onboard power to light up a little 
+LED bulb. This requires hooking up to the on-board voltage and ground that microcontrollers provide.
+
+First, let's talk about the differences between these microcontrollers.
+
+<img 
+width="200px" 
+src="/img/arduino20150615/default_Micro.png">
+<img 
+align="middle"
+width="350px" 
+src="/img/arduino20150615/default_Leo.png">
+<img 
+align="middle"
+width="350px" 
+src="/img/arduino20150615/default_Pi.png">
+
 
 Revisiting Hello World on the Arduino, to show how to make the same circuit with other microcontroller devices.
 
