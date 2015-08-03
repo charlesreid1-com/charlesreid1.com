@@ -1,9 +1,8 @@
 ---
 title: Arduino for Visual Thinkers - Hello World!
 date: 2015-06-10 20:53:59 -0700
-comments: true
 category: InternetOfThings
-tags: programming, visual, arduino, microcontrollers, science, electricity
+tags: programming, visual, arduino, arduino nano, microcontrollers, science, electricity
 ---
 
 This tutorial gives a rundown of a simple "Hello World" circuit with Arduino,
@@ -12,7 +11,7 @@ presented in a way that caters to visual thinkers.
 <img
 width="500px" 
 alt="Arduino Hello World"
-src="/img/HelloWorld.jpg">
+src="/img/arduino20150610/photo_HelloWorld.jpg">
 
 Before we dive into our Arduino hello world circuit, let's talk about power lines.
 
@@ -187,7 +186,7 @@ the same voltage.
 <img
 width="500px" 
 alt="Plain Breadboard"
-src="/img/Breadboard.jpg">
+src="/img/arduino20150610/photo_Breadboard.jpg">
 
 The left and right sides of the board have positive and negative buses.
 These are convenient because as long as you connect one hole in the plus 
@@ -205,7 +204,7 @@ look like this:
 <img
 width="500px" 
 alt="Breadboard With Power"
-src="/img/BreadboardPower.jpg">
+src="/img/arduino20150610/photo_BreadboardPower.jpg">
 
 Under this configuration, the entirety of the plus and minus buses on the left side 
 of the breadboard now have a 5 volt potential across them. Now, we can connect any hole
@@ -264,7 +263,7 @@ Here is a stylized circuit diagram that shows our "Hello World" circuit:
 <img
 height="400px" 
 alt="Hello World Circuit Diagram With Power And Connection"
-src="/img/HelloWorldPowerConnections_dia.jpg">
+src="/img/arduino20150610/diagram_HelloWorldPowerConnections.jpg">
 
 It is absolutely critical to understand the path that electrons take through the system.
 The circuit always begins at the source of voltage. The direction the circuit travels 
@@ -278,44 +277,72 @@ part of the Arduino's power cable. That way, we don't have to worry about whethe
 Arduino's ground pin is actually grounded.)
 
 Converting this to a breadboard design is straightforward, 
-although it will (inevitably) look different:
+although it will (inevitably) look different. We start by hooking up
+the Arduino's 5 volt and ground pins to the breadboard's power bus:
+
+<img
+width="500px" 
+alt="Hello World Breadboard With Power"
+src="/img/arduino20150610/bb_HelloWorldPower.png">
+
+Now we can use the power buses on the side of the breadboard to get some voltage
+to power our components! Now we hook up our LED circuit to the power bus. The elctrons
+start at the red positive junction, then travel through the resistors, through the LED,
+and escape to ground:
 
 <img
 width="500px" 
 alt="Hello World Breadboard With Power And Connection"
-src="/img/HelloWorldPowerConnections_bb.png">
+src="/img/arduino20150610/bb_HelloWorldPowerConnections.png">
 
 (Note that the funny arrangement of LED legs is just a matter of convention,
 the drawing program draws LEDs right-to-left while our circuit is laid out 
 left-to-right.)
+
+The long, or bent, leg of the LED is the positive side. That's the side
+that connects with the resistors. 
+
+The short leg of the LED is the negative side. That's the side that hooks up
+to the ground.
+
+<img
+height="400px" 
+alt="LED Diagram with Positive and Negative Labeled"
+src="/img/arduino20150610/diagram_LED.png">
 
 The breadboard uses a red and black wire to connect the Arduino's positive and negative pins
 to the breadboard's positive and negative buses. The yellow wires then connect the positive 
 voltage bus to the resistors, then to the LED, and finally to the ground, giving the electrons
 a complete path that they can follow.
 
-Now compare all of these with a real photo of the Hello World circuit:
+Here's how this maps onto the real Hello World circuit:
+
+<img
+width="800px"
+alt="Parallel Hello World Photograph Circuit Diagram"
+src="/img/arduino20150610/diagram_HelloWorldPowerConnectionsParallel.png">
+
+The first thing you should look for is the source of voltage - those are the red and black wires. 
+Those connect from the Arduino's positive and ground pins, to the breadboard's bus.
+The first yellow wire connects the positive bus to the resistors, then to the LED,
+and the other yellow wire connects the LED to ground, giving the electrons a complete path 
+that they can follow.
+
+Here's a picture of the finished circuit:
 
 <img
 width="500px" 
-alt="Hello World Photo With Power And Connection"
-src="/img/HelloWorldPowerConnections_photo.jpg">
-
-You should be able to recognize immediately the red and black wires,
-connecting from the Arduino's positive and ground pins, to the breadboard's bus.
-The first yellow wire connects the positive bus to the resistors, then to the LED,
-and the green wire connects the LED to ground, giving the electrons a complete path 
-that they can follow.
+alt="Hello World Photograph"
+src="/img/arduino20150610/photo_HelloWorldPowerConnections.jpg">
 
 # Stay Tuned for Code
 
 You may find it strange that this post does not contain 
-a single line of code. In fact, that is intentional:
+a single line of code. In fact, that is intentional!
+This post keeps things simple, by talking about the circuitry
+independent of any microcontroller programming.
 Arduino microcontrollers are complicated devices,
-so it's important to tackle one thing at a time,
-instead of trying to introduce Arduino with a 
-complicated example consisting of many moving parts
-(not literally).
+so it's important to tackle one thing at a time.
 
 The circuit does not utilize any code, because the circuit
 is connected to the Arduino's 5 volt pin, which is always

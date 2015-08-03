@@ -1,7 +1,6 @@
 ---
 title: Fair Tosses with Unfair Coins
 date: 2015-03-24 20:35:16 -0700
-comments: true
 category: Personal
 tags: programming, algorithms, math, science
 ---
