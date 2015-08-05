@@ -78,36 +78,36 @@ TEMPLATE_PAGES['about_modcontrol.js'] = 'about/about_modcontrol.js'
 
 TEMPLATE_PAGES['auto.html'] = 'about/auto.html'
 
-# consulting
-EXTRA_TEMPLATES_PATHS.append('consulting')
-TEMPLATE_PAGES['consulting.html']           = 'consulting/index.html'
-TEMPLATE_PAGES['consulting.css']            = 'consulting/consulting.css'
-TEMPLATE_PAGES['consulting.json']           = 'consulting/consulting.json'
-TEMPLATE_PAGES['consulting_modcontrol.js']  = 'consulting/consulting_modcontrol.js'
+### # consulting
+### EXTRA_TEMPLATES_PATHS.append('consulting')
+### TEMPLATE_PAGES['consulting.html']           = 'consulting/index.html'
+### TEMPLATE_PAGES['consulting.css']            = 'consulting/consulting.css'
+### TEMPLATE_PAGES['consulting.json']           = 'consulting/consulting.json'
+### TEMPLATE_PAGES['consulting_modcontrol.js']  = 'consulting/consulting_modcontrol.js'
 
 
 
-# writing
-# a.k.a.
-# blaaaaaaaaarg
-EXTRA_TEMPLATES_PATHS.append('writing')
-TEMPLATE_PAGES['writing.html'] = 'writing/index.html'
+### # writing
+### # a.k.a.
+### # blaaaaaaaaarg
+### EXTRA_TEMPLATES_PATHS.append('writing')
+### TEMPLATE_PAGES['writing.html'] = 'writing/index.html'
 
 
-# summary length
-SUMMARY_MAX_LENGTH = 100
-
-# time formats for blaaaarg
-DATE_FORMATS = {'en': '%A %m/%d/%Y',}
-
-# month formatting filter for blaaaaaaarg
-from datetime import datetime
-def int_to_month (m_int):
-    """Turns an integer month into a long month."""
-    d = datetime(year=2014, day=1, month=m_int)
-    return d.strftime("%B")
-
-JINJA_FILTERS = {'month_name':int_to_month}
+### # summary length
+### SUMMARY_MAX_LENGTH = 100
+### 
+### # time formats for blaaaarg
+### DATE_FORMATS = {'en': '%A %m/%d/%Y',}
+### 
+### # month formatting filter for blaaaaaaarg
+### from datetime import datetime
+### def int_to_month (m_int):
+###     """Turns an integer month into a long month."""
+###     d = datetime(year=2014, day=1, month=m_int)
+###     return d.strftime("%B")
+### 
+### JINJA_FILTERS = {'month_name':int_to_month}
 
 
 

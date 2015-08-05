@@ -1,7 +1,7 @@
 [
     {
         "name" : "Resume",
-        "description" : "The usual deal, an indescribably complicated person summing themselves up in a one-pager.",
+        "description" : "The usual deal: summing my professional self up in a one-pager.",
         "img" : "resume.png",
         "url" : "/about/resume.pdf"
     },
@@ -13,27 +13,15 @@
     },
     {
         "name" : "charlesreid1 Wiki",
-        "description" : "I eat my own dogfood! If it's on the wiki, it's because I've found it useful. The wiki is used for notes, code, reading, writing, and beyond.",
+        "description" : "This is it - this is where all the content is at. Notes, code, procedures, reading, writing, mathematics, and beyond.",
         "img" : "wiki.png",
         "url" : "/wiki"
-    },
-    {
-        "name" : "charlesreid1 Writing",
-        "description" : "You can check out my writing, which covers everything under the sun, lots of technical stuff, lots of Python, and the occaionsal wistful or fun post.",
-        "img" : "blog.png",
-        "url" : "/writing"
     },
     {
         "name" : "charlesreid1 Wordpress",
         "description" : "I maintain a Wordpress site, since Wordpress is a convenient, if overweight, blogging enginge.",
         "img" : "wordpress.png",
         "url" : "/wordpress"
-    },
-    {
-        "name" : "LinkedIn",
-        "description" : "Only because I have to.",
-        "img" : "linkedin.png",
-        "url" : "https://www.linkedin.com/in/charlesmartinreid"
     },
     {
         "name" : "@charlesreid1 on GitHub",
@@ -48,7 +36,7 @@
         "url" : "http://twitter.com/charlesreid1"
     },
     {
-        "name" : "@charlesreid1 on 500px",
+        "name" : "@charlesreid1 photography",
         "description" : "The absolute best cherry-picked photographs from a hard drive crammed full of photos.",
         "img" : "500px.png",
         "url" : "http://500px.com/charlesreid1"
