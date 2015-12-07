@@ -58,8 +58,10 @@ EXTRA_TEMPLATES_PATHS.append('angular')
 TEMPLATE_PAGES['index.html'] = 'index.html'
 TEMPLATE_PAGES['contact.html'] = 'contact/index.html'
 
-# hello angular world
-TEMPLATE_PAGES['hello.html'] = 'hello/index.html'
+TEMPLATE_PAGES['pgp.html'] = 'pgp/index.html'
+
+### # hello angular world
+### TEMPLATE_PAGES['hello.html'] = 'hello/index.html'
 
 
 # projects
