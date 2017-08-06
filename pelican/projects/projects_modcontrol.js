@@ -34,4 +34,3 @@ function PController($scope,datafactory) {
 // the first few arguments of the list should correspond to the Angular-namespace stuff to feed to HelloController
 var c = a.controller("projectsController", ["$scope", "datafactory", PController]);
 
-
