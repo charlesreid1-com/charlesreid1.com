@@ -12,74 +12,6 @@
 (function() {
 
     function IndexCtrl($scope) {
-
-        var all_sections2 = [];
-
-        // --------------------------------------------
-        // Define an array that will store all bits of info
-        // about each section 
-        
-        var all_sections = [];
-        
-        // Technical editing
-        moo = {};
-        moo['title']        = "Technical Editing";
-        moo['btn_text']     = "Technical Editing";
-        moo['link_target']  = '#a_techedit';
-        moo['text']         = 'We put the "technical" back in "technical editing."';
-        moo['paragraph']    = "Doxuments provides technical editing services from a chemical engineering Ph.D. with the technical breadth and depth you need from an editor. Whether you're writing a book, a disseration, a scientific paper, or a manuscript, our technical editing services nail down the details: writing quality, idea development, cross-referencing, equation-checking, compositing, image formatting, and print layouts. When it comes to effective technical communication, Doxuments helps you hit your target.";
-
-        moo['img']          = '1editing.jpg';
-        moo['icon']         = 'fa-pencil';
-        all_sections.push(moo);
-        
-        // Document formats
-        moo = {};
-        moo['title']        = "Document Formats";
-        moo['btn_text']     = 'Document Formats';
-        moo['link_target']  = '#a_doctypes';
-        moo['text']         = "A technical documents Babelfish, Doxuments can handle it all: LaTeX, Word, HTML, even large code bases.";
-        moo['paragraph']    = "In our modern technology ecosystem there are dozens of document formats to deal with. Doxuments is the Babelfish that ties everything together: we can handle any technical document format, ranging from Word to Latex, PDF to HTML, Matlab script comments or inline Python documentation, even optical character recognition for scanned images of documents, and turn them into any format you want. Whether you're writing a graduate-level mathematics textbook, converting your dissertation from Word to Latex, or documenting a huge code base, Doxuments has you covered.";
-        moo['img']          = '2formats.jpg';
-        moo['icon']         = 'fa-exchange';
-        all_sections.push(moo);
-        
-        // Compositing and Typesetting
-        moo = {};
-        moo['title']        = "Compositing and Typesetting";
-        moo['btn_text']     = 'Compositing & Typesetting';
-        moo['link_target']  = '#a_compositing';
-        moo['text']         = "Our mastery of the complexities of document formats make compositing and layout headaches disappear.";
-        moo['paragraph']    = "Going from a finished document to a document that’s ready to publish is a long process requiring esoteric knowledge of publishing lingo. Doxuments does all the hard work of compositing and typesetting for the pre-publishing step. Doxuments can also build you a custom webpage or blog for your technical content, or customize your existing web content. Whatever your publishing medium, Doxuments handles the details.";
-        moo['img']          = '3compositing.jpg';
-        moo['icon']         = 'fa-crop';
-        all_sections.push(moo);
-        
-        // Design
-        moo = {};
-        moo['title']        = "Document Design";
-        moo['btn_text']     = 'Document Design';
-        moo['link_target']  = '#a_design';
-        moo['text']         = "Turbo-charge your technical communications with Doxuments-designed templates and style guides.";
-        moo['paragraph']    = "A consistent visual and written style make your documents communicate with power. Doxuments offers design services for document templates and books for your company. Doxuments can also create a style guide for your company, laboratory, or department.  Doxuments design services helps you to say it right and get people listening.";
-        moo['img']          = '4design.jpg';
-        moo['icon']         = 'fa-dot-circle-o';
-        all_sections.push(moo);
-        
-        // Automation and scripting
-        moo = {};
-        moo['title']        = "Automation and Scripting";
-        moo['btn_text']     = 'Automation & Scripting';
-        moo['link_target']  = '#a_autoscript';
-        moo['text']         = "Spend less time fiddling and more time analyzing: Doxuments brings the power of modern programming languages to bear on your workflow.";
-        moo['paragraph']    = "Wish your code base would document itself? Slogging through the same repetitive tasks to make reports? Do you daydream about being able to run an experiment, process and analyze the data, and generate a report filled with graphs with the push of a single button?  No sweat: Doxuments offers report generation services to make all of this possible.";
-        moo['img']          = '5automation.jpg';
-        moo['icon']         = 'fa-magic';
-        all_sections.push(moo);
-
-
-        $scope.all_sections = all_sections;
-
     };
 
     var a = angular.module("indexApp", [], function($interpolateProvider) {
@@ -110,9 +42,9 @@
         <div class="col-sm-10 col-centered" style="text-align: center;">
             <div class="cosmojumbo">
                 <p>&nbsp;</p>
-                <p class="lead cosmojumboText">Charles is a consultant for Dox Consulting. <a href="{{SITEURL}}/contact/">(Contact Charles)</a></p>
-                <p class="lead cosmojumboText">Charles has a background in programming, engineering, high performance computing, computational physics, and chemistry, and is a doctor of chemical engineering.</p>
-                <p class="lead cosmojumboText">Charles has worked at two national labs and a chemical technology startup company.</p>
+                <p class="lead cosmojumboText">This is the webpage of Dr. Charles Reid.</p>
+                <p class="lead cosmojumboText">I am a mathematics professor at South Seattle College. My background is in chemical engineering, high performance computing, computational physics, and chemistry. I hold a doctorate in chemical engineering.</p>
+                <p class="lead cosmojumboText">I have several years of teaching experience, and have worked at two national labs and a chemical technology startup company.</p>
                 <p>&nbsp;</p>
                 <p class="lead cosmojumboText">Areas of expertise include:</p>
                 <p class="lead cosmojumboText">Unix/Linux, Networking, Security, High Performance Computing</p>
