@@ -78,14 +78,6 @@ TEMPLATE_PAGES['about.css']  = 'about/about.css'
 TEMPLATE_PAGES['about.json'] = 'about/about.json'
 TEMPLATE_PAGES['about_modcontrol.js'] = 'about/about_modcontrol.js'
 
-TEMPLATE_PAGES['auto.html'] = 'about/auto.html'
-
-### # consulting
-### EXTRA_TEMPLATES_PATHS.append('consulting')
-### TEMPLATE_PAGES['consulting.html']           = 'consulting/index.html'
-### TEMPLATE_PAGES['consulting.css']            = 'consulting/consulting.css'
-### TEMPLATE_PAGES['consulting.json']           = 'consulting/consulting.json'
-### TEMPLATE_PAGES['consulting_modcontrol.js']  = 'consulting/consulting_modcontrol.js'
 
 
 
