@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
 import re
 import os
 
@@ -13,7 +10,7 @@ PATH = 'content'
 DEFAULT_LANG = u'en'
 
 # the theme 
-THEME = 'cmr-theme'
+THEME = 'charlesreid1.com-theme'
 
 
 
@@ -42,6 +39,8 @@ STATIC_PATHS = ['img']
 
 
 
+
+
 # --------------------
 # Templates
 
@@ -49,30 +48,22 @@ STATIC_PATHS = ['img']
 EXTRA_TEMPLATES_PATHS = []
 TEMPLATE_PAGES = {}
 
-
-
-
-
-# index 
-EXTRA_TEMPLATES_PATHS.append('angular')
 TEMPLATE_PAGES['index.html'] = 'index.html'
 TEMPLATE_PAGES['contact.html'] = 'contact/index.html'
-#TEMPLATE_PAGES['pgp.html'] = 'pgp/index.html'
+TEMPLATE_PAGES['notes.html'] = 'notes/index.html'
 
 
-# projects
-EXTRA_TEMPLATES_PATHS.append('projects')
-TEMPLATE_PAGES['projects.html'] = 'projects/index.html'
-TEMPLATE_PAGES['projects.json'] = 'projects/projects.json'
-TEMPLATE_PAGES['projects.css']  = 'projects/projects.css'
-TEMPLATE_PAGES['projects_modcontrol.js'] = 'projects/projects_modcontrol.js'
- 
-# about
-EXTRA_TEMPLATES_PATHS.append('about')
-TEMPLATE_PAGES['about.html'] = 'about/index.html'
-TEMPLATE_PAGES['about.css']  = 'about/about.css'
-TEMPLATE_PAGES['about.json'] = 'about/about.json'
-TEMPLATE_PAGES['about_modcontrol.js'] = 'about/about_modcontrol.js'
+
+
+##########################
+### Just an example of
+### how to add an app folder
+### # about
+### EXTRA_TEMPLATES_PATHS.append('about')
+### TEMPLATE_PAGES['about.html'] = 'about/index.html'
+### TEMPLATE_PAGES['about.css']  = 'about/about.css'
+### TEMPLATE_PAGES['about.json'] = 'about/about.json'
+### TEMPLATE_PAGES['about_modcontrol.js'] = 'about/about_modcontrol.js'
 
 
 
@@ -86,10 +77,5 @@ CATEGORY_FEED_ATOM = None
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
-
 DEFAULT_PAGINATION = False
-
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
-
 TIMEZONE = 'America/Los_Angeles'
