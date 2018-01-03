@@ -5,11 +5,11 @@ import re
 import os
 
 SITEURL = ''
+
 AUTHOR = u'charlesreid1'
 SITENAME = u'charlesreid1'
 
 PATH = 'content'
-TIMEZONE = 'America/Los_Angeles'
 DEFAULT_LANG = u'en'
 
 # the theme 
@@ -24,7 +24,7 @@ HOME = os.environ.get('HOME')
 
 PLUGIN_PATHS = [HOME+'/codes/pelican-plugins/']
 
-PLUGINS = ['liquid_tags','render_math']
+PLUGINS = ['render_math']
 
 MARKUP = ('md')
 
@@ -57,11 +57,7 @@ TEMPLATE_PAGES = {}
 EXTRA_TEMPLATES_PATHS.append('angular')
 TEMPLATE_PAGES['index.html'] = 'index.html'
 TEMPLATE_PAGES['contact.html'] = 'contact/index.html'
-
 #TEMPLATE_PAGES['pgp.html'] = 'pgp/index.html'
-
-### # hello angular world
-### TEMPLATE_PAGES['hello.html'] = 'hello/index.html'
 
 
 # projects
@@ -81,29 +77,6 @@ TEMPLATE_PAGES['about_modcontrol.js'] = 'about/about_modcontrol.js'
 
 
 
-### # writing
-### # a.k.a.
-### # blaaaaaaaaarg
-### EXTRA_TEMPLATES_PATHS.append('writing')
-### TEMPLATE_PAGES['writing.html'] = 'writing/index.html'
-
-
-### # summary length
-### SUMMARY_MAX_LENGTH = 100
-### 
-### # time formats for blaaaarg
-### DATE_FORMATS = {'en': '%A %m/%d/%Y',}
-### 
-### # month formatting filter for blaaaaaaarg
-### from datetime import datetime
-### def int_to_month (m_int):
-###     """Turns an integer month into a long month."""
-###     d = datetime(year=2014, day=1, month=m_int)
-###     return d.strftime("%B")
-### 
-### JINJA_FILTERS = {'month_name':int_to_month}
-
-
 
 # --------------8<---------------------
 
@@ -118,3 +91,5 @@ DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
+
+TIMEZONE = 'America/Los_Angeles'
