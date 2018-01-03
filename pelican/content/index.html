@@ -7,28 +7,6 @@
 
 <link href="{{ SITEURL }}/dox.css" rel="stylesheet" stype="text/css" />
 
-<script type="text/javascript">
-
-(function() {
-
-    function IndexCtrl($scope) {
-    };
-
-    var a = angular.module("indexApp", [], function($interpolateProvider) {
-                $interpolateProvider.startSymbol('[[');
-                $interpolateProvider.endSymbol(']]');
-            }
-        );
-    var c = a.controller("IndexCtrl", ["$scope", IndexCtrl]);
-
-})();
-
-</script>
-
-<div ng-app="indexApp">
-<div ng-controller="IndexCtrl">
-
-
 <div class="container">
 
     <div class="row">
@@ -46,14 +24,23 @@
                 <p>&nbsp;</p>
                 <p class="lead cosmojumboText">Wiki: <a href="//charlesreid1.com/wiki">charlesreid1.com/wiki</a>
                 <p class="lead cosmojumboText">Git: <a href="//git.charlesreid1.com/explore">git.charlesreid1.com</a>
+                <p class="lead cosmojumboText">Awesome List: <a href="//github.com/charlesreid1/charlesreid1-awesome/">github.com/charlesreid1/charlesreid1-awesome</a>
                 <p class="lead cosmojumboText">Github: <a href="//github.com/charlesreid1">github.com/charlesreid1</a>
                 <p class="lead cosmojumboText">Blog: <a href="//charlesreid1.github.io/">charlesreid1.github.io</a>
+
                 <p>&nbsp;</p>
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Rubik%27s_cube_v2.svg" width="40px" />
-                <p class="lead cosmojumboText">Average Rubik's Cube Time: 1:30</p>
+                <p>&nbsp;</p>
+                <img src="/img/Rubiks_cube_v2.svg" width="40px" />
+                <p class="lead cosmojumboText">Average <a href="https://charlesreid1.com/wiki/Rubiks_Cube">Rubik's Cube</a> Time: 1:10</p>
+                <p>&nbsp;</p>
                 <p>&nbsp;</p>
                 <img src="/img/rubiks_revenge.png" width="40px" />
-                <p class="lead cosmojumboText">Average <a href="https://charlesreid1.com/wiki/Rubiks_Revenge">Rubik's Revenge</a> Time: 6:30</p>
+                <p class="lead cosmojumboText">Average <a href="https://charlesreid1.com/wiki/Rubiks_Revenge">Rubik's Revenge</a> Time: 4:15</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
+                <img src="https://projecteuler.net/profile/ay4h7optu6tw7.png" /><br />
+                Friend Key: 1154591_8uh1saqQnYmi05JVkGSaJacXwEerBSFB
+                <p>&nbsp;</p>
                 <p>&nbsp;</p>
                 <p class="lead cosmojumboText">Areas of professional experience:</p>
                 <p class="lead cosmojumboText">Data Acquisition, Data Analysis, Data Engineering: Turning Data Into Knowledge.</p>
@@ -73,16 +60,14 @@
                 <p class="lead cosmojumboText">Breaking Down Concepts Into Simple Enough Terms That Five Year Olds Can Understand Me.</p> 
                 <p>&nbsp;</p>
                 <p class="lead cosmojumboText">Really, Everything Is On The Wiki: <a href="//charlesreid1.com/wiki">charlesreid1.com/wiki</a>
+                <p>&nbsp;</p>
+                <p>&nbsp;</p>
 
             </div>
         </div>
     </div>
 
     <div class="v100"></div>
-
-</div><!--container-->
-</div><!--ng-app-->
-</div><!--ng-controller-->
 
 {% endblock %}
 
