@@ -52,7 +52,7 @@ TEMPLATE_PAGES['index.html'] = 'index.html'
 TEMPLATE_PAGES['contact.html'] = 'contact/index.html'
 TEMPLATE_PAGES['notes.html'] = 'notes/index.html'
 TEMPLATE_PAGES['calendar.html'] = 'calendar/index.html'
-TEMPLATE_PAGES['page_history.csv'] = 'calendar/page_history.csv'
+TEMPLATE_PAGES['page_edits.csv'] = 'calendar/page_edits.csv'
 
 
 
