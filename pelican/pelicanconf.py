@@ -51,8 +51,12 @@ TEMPLATE_PAGES = {}
 TEMPLATE_PAGES['index.html'] = 'index.html'
 TEMPLATE_PAGES['contact.html'] = 'contact/index.html'
 TEMPLATE_PAGES['notes.html'] = 'notes/index.html'
+
 TEMPLATE_PAGES['calendar.html'] = 'calendar/index.html'
 TEMPLATE_PAGES['page_edits.csv'] = 'calendar/page_edits.csv'
+
+TEMPLATE_PAGES['life.html'] = 'life/index.html'
+TEMPLATE_PAGES['json-sans-eval.js'] = 'life/json-sans-eval.js'
 
 
 
