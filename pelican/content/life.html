@@ -3,36 +3,81 @@
 
 
 <div class="container">
+
+
 <div class="row">
-
     <h1 style="color: #eee;">Conway's Game of Life</h1>
+</div>
 
-    <p>Generation: <span id="generation"></span></p>
-    <p>Live Cells: <span id="livecells"></span></p>
-    <!--
-    <p>Step Time: <span id="steptime"></span> ms</p>
-    -->
+<div class="row">
+    <div class="col-md-3">
 
-    <div class="box controls">
-      <div class="subtitle">Controls</div>
-      <form action="">
-        <input type="button" value="Run" id="buttonRun" title="Key: R" />
-        <input type="button" value="Step" id="buttonStep" title="Key: S" />
-        <input type="button" value="Clear" id="buttonClear" title="Key: C" />
-        <input type="button" value="Export" id="buttonExport" />
-        <span id="exportUrl"> | <a id="exportUrlLink">Link</a> | <a id="exportTinyUrlLink" title="Tiny URL">Create micro URL</a></span>
-      </form>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <span class="badge label label-default" id="generation"></span>
+            Generation:
+          </li>
+          <li class="list-group-item">
+            <span class="badge label label-default" id="livecells"></span>
+            Live Cells:
+          </li>
+        </ul>
+
+        <p>
+            <span class="label label-default" id="layoutMessages"></span>
+        </p>
+
     </div>
+    <div class="col-md-3">
 
-    <div class="box layout">
-      <div class="subtitle">Layout</div>
-      <form>
-       <input type="button" id="buttonTrail" value="Trail"/>
-       <input type="button" id="buttonGrid" value="Grid" />
-       <input type="button" id="buttonColors" value="Colors" />
-       <span id="layoutMessages"></span>
-      </form>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Life Control</h3>
+            </div>
+            <div class="panel-body">
+
+                <div class="box controls">
+                    <form action="">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" id="buttonRun"   class="btn btn-lg btn-info btn-secondary">Run</button>
+                            <button type="button" id="buttonStep"  class="btn btn-lg btn-info btn-secondary">Step</button>
+                            <button type="button" id="buttonClear" class="btn btn-lg btn-info btn-secondary">Clear</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
     </div>
+    <div class="col-md-3">
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Layout Control</h3>
+            </div>
+            <div class="panel-body">
+
+                <div class="box controls">
+                    <form action="">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" id="buttonTrail"  class="btn btn-lg btn-info btn-secondary">Trail</button>
+                            <button type="button" id="buttonGrid"   class="btn btn-lg btn-info btn-secondary">Grid</button>
+                            <button type="button" id="buttonColors" class="btn btn-lg btn-info btn-secondary">Colors</button>
+                        </div>
+                    </form>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+<div class="row">
 
     <canvas id="canvas" width="900" height="450"></canvas>
 
@@ -40,6 +85,8 @@
     <p>&nbsp;</p>
 
 </div>
+
+
 </div>
 
 
@@ -206,10 +253,6 @@
       schemes : [
       {
         color : tileStrokeColor1
-      },
-
-      {
-        color : tileStrokeColor2
       },
 
       {
@@ -436,7 +479,6 @@
       this.helpers.registerEvent(document.getElementById('buttonRun'), 'click', this.handlers.buttons.run, false);
       this.helpers.registerEvent(document.getElementById('buttonStep'), 'click', this.handlers.buttons.step, false);
       this.helpers.registerEvent(document.getElementById('buttonClear'), 'click', this.handlers.buttons.clear, false);
-      this.helpers.registerEvent(document.getElementById('buttonExport'), 'click', this.handlers.buttons.export_, false);
 
       // Layout
       this.helpers.registerEvent(document.getElementById('buttonTrail'), 'click', this.handlers.buttons.trail, false);
@@ -664,40 +706,6 @@
             GOL.canvas.drawWorld(); // Force complete redraw
           }
         },
-
-
-        /**
-         * Button Handler - Export State
-         */
-        export_ : function() {
-          var i, j, url = '', cellState = '', params = '';
-
-          for (i = 0; i < GOL.listLife.actualState.length; i++) {
-            cellState += '{"'+GOL.listLife.actualState[i][0]+'":[';
-            //cellState += '{"one":[';
-            for (j = 1; j < GOL.listLife.actualState[i].length; j++) {
-              cellState += GOL.listLife.actualState[i][j]+',';
-            }
-            cellState = cellState.substring(0, cellState.length - 1) + ']},';
-          }
-
-          cellState = cellState.substring(0, cellState.length - 1) + '';
-
-          if (cellState.length !== 0) {
-            url = (window.location.href.indexOf('?') === -1) ? window.location.href : window.location.href.slice(0, window.location.href.indexOf('?'));
-
-            params = '?autoplay=0' +
-            '&trail=' + (GOL.trail.current ? '1' : '0') +
-            '&grid=' + (GOL.grid.current + 1) +
-            '&colors=' + (GOL.colors.current + 1) +
-            '&zoom=' + (GOL.zoom.current + 1) +
-            '&s=['+ cellState +']';
-
-            document.getElementById('exportUrlLink').href = params;
-            document.getElementById('exportTinyUrlLink').href = 'http://tinyurl.com/api-create.php?url='+ url + params;
-            document.getElementById('exportUrl').style.display = 'inline';
-          }
-        }
 
       }
     
