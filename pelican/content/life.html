@@ -9,6 +9,8 @@
     <h1 style="color: #eee;">Conway's Game of Life</h1>
 </div>
 
+<p>&nbsp;</p>
+
 <div class="row">
     <div class="col-md-3">
 
@@ -39,9 +41,9 @@
                 <div class="box controls">
                     <form action="">
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" id="buttonRun"   class="btn btn-lg btn-info btn-secondary">Run</button>
-                            <button type="button" id="buttonStep"  class="btn btn-lg btn-info btn-secondary">Step</button>
-                            <button type="button" id="buttonClear" class="btn btn-lg btn-info btn-secondary">Clear</button>
+                            <button type="button" id="buttonRun"   class="btn btn-lg btn-success btn-secondary">Run</button>
+                            <button type="button" id="buttonStep"  class="btn btn-lg btn-default btn-secondary">Step</button>
+                            <button type="button" id="buttonClear" class="btn btn-lg btn-default btn-secondary">Clear</button>
                         </div>
                     </form>
                 </div>
@@ -61,9 +63,9 @@
                 <div class="box controls">
                     <form action="">
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" id="buttonTrail"  class="btn btn-lg btn-info btn-secondary">Trail</button>
-                            <button type="button" id="buttonGrid"   class="btn btn-lg btn-info btn-secondary">Grid</button>
-                            <button type="button" id="buttonColors" class="btn btn-lg btn-info btn-secondary">Colors</button>
+                            <button type="button" id="buttonTrail"  class="btn btn-lg btn-default btn-secondary">Trail</button>
+                            <button type="button" id="buttonGrid"   class="btn btn-lg btn-default btn-secondary">Grid</button>
+                            <button type="button" id="buttonColors" class="btn btn-lg btn-default btn-secondary">Colors</button>
                         </div>
                     </form>
                 </div>
@@ -75,7 +77,7 @@
     </div>
 </div>
 
-
+<p>&nbsp;</p>
 
 <div class="row">
 
@@ -241,7 +243,7 @@
 
     // Trail state
     trail : {
-      current: true,
+      current: false,
       schedule : false
     },
 
@@ -304,26 +306,26 @@
 
       {
         dead : realBackgroundColor,
-        trail : [realBackgroundColor],
-        alive : seafoam_green_candy_red
-      },
-
-      {
-        dead : realBackgroundColor,
-        trail : [realBackgroundColor],
-        alive : purple_orange
-      },
-
-      {
-        dead : realBackgroundColor,
-        trail : [realBackgroundColor],
-        alive : byr
+        trail : grays,
+        alive : [lightTileColor]
       },
 
       {
         dead : realBackgroundColor,
         trail : grays,
-        alive : [lightTileColor]
+        alive : seafoam_green_candy_red
+      },
+
+      {
+        dead : realBackgroundColor,
+        trail : grays,
+        alive : purple_orange
+      },
+
+      {
+        dead : realBackgroundColor,
+        trail : grays,
+        alive : byr
       }
 
       ]
@@ -635,9 +637,13 @@
           GOL.running = !GOL.running;
           if (GOL.running) {
             GOL.nextStep();
-            document.getElementById('buttonRun').value = 'Stop';
+            $("#buttonRun").text("Stop");
+            document.getElementById('buttonRun').classList.remove("btn-success");
+            document.getElementById('buttonRun').classList.add("btn-danger");
           } else {
-            document.getElementById('buttonRun').value = 'Run';
+            $("#buttonRun").text("Run");
+            document.getElementById('buttonRun').classList.remove("btn-danger");
+            document.getElementById('buttonRun').classList.add("btn-success");
           }
         },
 
@@ -659,7 +665,9 @@
           if (GOL.running) {
             GOL.clear.schedule = true;
             GOL.running = false;
-            document.getElementById('buttonRun').value = 'Run';
+            $("#buttonRun").text("Run");
+            document.getElementById('buttonRun').classList.remove("btn-danger");
+            document.getElementById('buttonRun').classList.add("btn-success");
           } else {
             GOL.cleanUp();
           }
