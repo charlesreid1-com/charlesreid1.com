@@ -52,8 +52,11 @@ TEMPLATE_PAGES['index.html'] = 'index.html'
 TEMPLATE_PAGES['contact.html'] = 'contact/index.html'
 TEMPLATE_PAGES['notes.html'] = 'notes/index.html'
 
-TEMPLATE_PAGES['calendar.html'] = 'calendar/index.html'
-TEMPLATE_PAGES['page_edits.csv'] = 'calendar/page_edits.csv'
+TEMPLATE_PAGES['wiki_calendar.html']  = 'wiki_calendar/index.html'
+TEMPLATE_PAGES['page_edits.csv']      = 'wiki_calendar/page_edits.csv'
+
+TEMPLATE_PAGES['git_calendar.html']   = 'git_calendar/index.html'
+TEMPLATE_PAGES['commit_counts.csv']   = 'git_calendar/commit_counts.csv'
 
 TEMPLATE_PAGES['life.html'] = 'life/index.html'
 TEMPLATE_PAGES['json-sans-eval.js'] = 'life/json-sans-eval.js'
