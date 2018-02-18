@@ -1,0 +1,12 @@
+{# this header is shimmed in place of the original pelican theme header #}
+
+{# these includes refer to the original pelican theme #}
+{% extends '_includes/head.html' %}
+
+{# set variables that are in the original head.html #}
+{% block extra_header %}
+    <!-- map header -->
+    <!-- load the leaflet library -->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+    <!-- end map header -->
+{% endblock %}
