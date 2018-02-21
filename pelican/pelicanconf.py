@@ -1,5 +1,4 @@
-import re
-import os
+import os, re, glob
 
 SITEURL = ''
 
@@ -60,6 +59,26 @@ TEMPLATE_PAGES['commit_counts.csv']   = 'git_calendar/commit_counts.csv'
 
 TEMPLATE_PAGES['life.html'] = 'life/index.html'
 TEMPLATE_PAGES['json-sans-eval.js'] = 'life/json-sans-eval.js'
+
+
+
+# -----------------------
+# Strategies for data directory:
+#   a) clone data-master/ as a submodule in charlesreid1:master (htdocs branch)
+#       PROS: not checking huge amounts of (duplicate) information into htdocs
+#       CONS: awkward workflow (esp. since htdocs not linked directly)
+#   b) clone data-master/ directly into htdocs folder
+#       PROS: not checking data into repo, simple workflow
+#       CONS: ...
+#   c) clone data-master/ as submodule in charlesreid1-src, add to static paths
+#       PROS: simple workflow
+#       CONS: ugh, too much data duplication
+#
+# Final answer: clone data-master/ directly into charlesreid1 htdocs folder
+# charlesreid1.com/data/
+# 
+# now any data can be referenced from web applications on charlesreid1.com!
+
 
 
 # --------------------
