@@ -129,7 +129,7 @@ var width = 700,
 
 var char_formatStuff = d3.format(",");
 var log_char_formatStuff = d3.format(".3");
-var edits_formatStuff = d3.format(",");
+var formatStuff = d3.format(",");
 
 /*
 TEH COLORRRZZZZ
@@ -258,7 +258,7 @@ git_svg.append("g")
 /*
 Load up the csv file
 */
-d3.csv("git_calendar/commit_counts.csv", function(error, csv) {
+d3.csv("/data/git/commit_counts.csv", function(error, csv) {
   if (error) throw error;
 
   /*
@@ -271,6 +271,10 @@ d3.csv("git_calendar/commit_counts.csv", function(error, csv) {
         })
         .object(csv);
 
+  /*
+  Filter, color, and label the tiles
+  */
+
   git_rect.filter(function(d) { return d in commit_data; })
         .attr("fill", function(d) { return git_color(commit_data[d]); })
         .append("title")
@@ -279,7 +283,7 @@ d3.csv("git_calendar/commit_counts.csv", function(error, csv) {
 
 
 
-d3.csv("wiki_calendar/page_edits.csv", function(error, csv) {
+d3.csv("/data/wiki/page_edits.csv", function(error, csv) {
   if (error) throw error;
 
   /*
@@ -299,7 +303,7 @@ d3.csv("wiki_calendar/page_edits.csv", function(error, csv) {
   edits_rect.filter(function(d) { return d in edits_data; })
         .attr("fill", function(d) { return edits_color(edits_data[d]); })
         .append("title")
-        .text(function(d) { return d + ": " + edits_formatStuff(edits_data[d]); });
+        .text(function(d) { return d + ": " + formatStuff(edits_data[d]); });
 
 });
 
