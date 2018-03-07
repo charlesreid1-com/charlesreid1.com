@@ -58,6 +58,8 @@ TEMPLATE_PAGES['git_calendar.html']   = 'git_calendar/index.html'
 TEMPLATE_PAGES['life.html'] = 'life/index.html'
 TEMPLATE_PAGES['json-sans-eval.js'] = 'life/json-sans-eval.js'
 
+TEMPLATE_PAGES['logo.html'] = 'life/logo.html'
+
 
 
 # -----------------------

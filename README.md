@@ -19,3 +19,10 @@ run the command `pelican content`
 
 move the contents of the `output/` directory into the live web directory `/www/charlesreid1.com/htdocs`
 
+## theme 
+
+the theme is defined in a separate repo
+
+git.charlesreid1.com/charlesreid1/charlesreid1.com-theme
+
+
