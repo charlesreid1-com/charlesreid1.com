@@ -18,7 +18,7 @@ THEME = 'charlesreid1.com-theme'
 
 HOME = os.environ.get('HOME')
 
-PLUGIN_PATHS = [HOME+'/codes/pelican-plugins/']
+PLUGIN_PATHS = [HOME+'/codes/charlesreid1/pelican-plugins/']
 
 PLUGINS = ['render_math']
 
