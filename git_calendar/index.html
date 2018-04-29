@@ -178,7 +178,7 @@ svg.append("g")
 /*
 Load up the csv file
 */
-d3.csv("commit_counts.csv", function(error, csv) {
+d3.csv("/data/commit_counts.csv", function(error, csv) {
   if (error) throw error;
 
   /*
