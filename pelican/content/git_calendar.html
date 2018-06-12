@@ -116,8 +116,10 @@ svg.append("g")
 
 /*
 Load up the csv file
+https://git.charlesreid1.com/data/charlesreid1-data/raw/branch/master/commit_counts.csv
 */
-d3.csv("/data/commit_counts.csv", function(error, csv) {
+
+d3.csv("https://git.charlesreid1.com/data/charlesreid1-data/raw/branch/master/commit_counts.csv", function(error, csv) {
   if (error) throw error;
 
   /*
