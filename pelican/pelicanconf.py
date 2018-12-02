@@ -27,17 +27,9 @@ MARKUP = ('md')
 # Don't try to turn HTML files into pages
 READERS = {'html': None}
 
-
-
-
-# --------------------
 # Static stuff
 
 STATIC_PATHS = ['img']
-
-
-
-
 
 
 # --------------------
@@ -48,11 +40,9 @@ EXTRA_TEMPLATES_PATHS = []
 TEMPLATE_PAGES = {}
 
 TEMPLATE_PAGES['index.html'] = 'index.html'
-TEMPLATE_PAGES['contact.html'] = 'contact/index.html'
-TEMPLATE_PAGES['notes.html'] = 'notes/index.html'
 
-TEMPLATE_PAGES['wiki_calendar.html']  = 'wiki_calendar/index.html'
-
+#TEMPLATE_PAGES['notes.html'] = 'notes/index.html'
+#TEMPLATE_PAGES['wiki_calendar.html']  = 'wiki_calendar/index.html'
 TEMPLATE_PAGES['git_calendar.html']   = 'git_calendar/index.html'
 
 TEMPLATE_PAGES['life.html'] = 'life/index.html'
@@ -61,16 +51,15 @@ TEMPLATE_PAGES['json-sans-eval.js'] = 'life/json-sans-eval.js'
 TEMPLATE_PAGES['logo.html'] = 'life/logo.html'
 
 
-
 # -----------------------
 # Strategies for data directory:
-#   a) clone data-master/ as a submodule in charlesreid1:master (htdocs branch)
+# X a) clone data-master/ as a submodule in charlesreid1:master (htdocs branch)
 #       PROS: not checking huge amounts of (duplicate) information into htdocs
 #       CONS: awkward workflow (esp. since htdocs not linked directly)
 #   b) clone data-master/ directly into htdocs folder
 #       PROS: not checking data into repo, simple workflow
 #       CONS: ...
-#   c) clone data-master/ as submodule in charlesreid1-src, add to static paths
+# X c) clone data-master/ as submodule in charlesreid1-src, add to static paths
 #       PROS: simple workflow
 #       CONS: ugh, too much data duplication
 #
@@ -81,41 +70,29 @@ TEMPLATE_PAGES['logo.html'] = 'life/logo.html'
 
 
 
-# --------------------
-# Example map app
-EXTRA_TEMPLATES_PATHS.append('examplemap')
-TEMPLATE_PAGES['map.html']      = 'examplemap/index.html'
-TEMPLATE_PAGES['map.js']        = 'examplemap/map.js'
-TEMPLATE_PAGES['map.css']       = 'examplemap/map.css'
-TEMPLATE_PAGES['map.geojson']   = 'examplemap/map.geojson'
+### ######################
+### # Just an example of
+### # how to add an app folder.
+### # This assumes your app is 
+### # in foobar/
+### EXTRA_TEMPLATES_PATHS.append('foobar')
+### TEMPLATE_PAGES['foobar.html'] = 'foobar/index.html'
+### TEMPLATE_PAGES['foobar.css']  = 'foobar/foobar.css'
+### TEMPLATE_PAGES['foobar.json'] = 'foobar/foobar.json'
+### TEMPLATE_PAGES['foobar_modcontrol.js'] = 'foobar/foobar_modcontrol.js'
+### ######################
 
 
 ## --------------------
-## Moar map apps
-#EXTRA_TEMPLATES_PATHS.append('maps')
-#TEMPLATE_PAGES['mapsindex.html'] = 'maps/index.html'
-#TEMPLATE_PAGES['maps.html']      = 'maps/maps.html'
-#TEMPLATE_PAGES['maps.js']        = 'maps/maps.js'
-#TEMPLATE_PAGES['maps.css']       = 'maps/maps.css'
-#TEMPLATE_PAGES['maps.geojson']   = 'maps/maps.geojson'
+## Example map app
+#EXTRA_TEMPLATES_PATHS.append('examplemap')
+#TEMPLATE_PAGES['map.html']      = 'examplemap/index.html'
+#TEMPLATE_PAGES['map.js']        = 'examplemap/map.js'
+#TEMPLATE_PAGES['map.css']       = 'examplemap/map.css'
+#TEMPLATE_PAGES['map.geojson']   = 'examplemap/map.geojson'
 
 
 
-
-
-
-
-
-##########################
-### Just an example of
-### how to add an app folder
-### # about
-### EXTRA_TEMPLATES_PATHS.append('about')
-### TEMPLATE_PAGES['about.html'] = 'about/index.html'
-### TEMPLATE_PAGES['about.css']  = 'about/about.css'
-### TEMPLATE_PAGES['about.json'] = 'about/about.json'
-### TEMPLATE_PAGES['about_modcontrol.js'] = 'about/about_modcontrol.js'
-##########################
 
 
 
