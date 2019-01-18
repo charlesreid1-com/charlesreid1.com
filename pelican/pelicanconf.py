@@ -40,6 +40,7 @@ EXTRA_TEMPLATES_PATHS = []
 TEMPLATE_PAGES = {}
 
 TEMPLATE_PAGES['index.html'] = 'index.html'
+TEMPLATE_PAGES['about.html'] = 'about/index.html'
 
 #TEMPLATE_PAGES['notes.html'] = 'notes/index.html'
 #TEMPLATE_PAGES['wiki_calendar.html']  = 'wiki_calendar/index.html'
