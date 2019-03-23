@@ -21,17 +21,24 @@ repo for details.
 
 ## Make the Site
 
-Go to the `pelican/` directory
+Go to the `pelican/` directory.
 
-Run the command `pelican content`
+Run the command `pelican content`.
 
-Site content is generated in the `output/` directory
+Site content will be generated in the `output/` directory (next to the `content/` directory).
 
 The content needs to be copied into the live web content directory
 `/www/charlesreid1.com/htdocs`.
 
-**Prefererd method:** Use the `git_pull_www.sh` script in the [dotfiles/debian](https://git.charlesreid1.com/dotfiles/debian)
-repository. Go to `dotfiles/krash_scripts/`.
+**Prefererd method:** Use the `git_pull_www.sh` script, located at:
+
+- the <https://git.charlesreid1.com/dotfiles/debian> repo, 
+  mirrored at <https://github.com/charlesreid1/debian-dotfiles>,
+  in the [`dotfiles/krash_scripts/` directory](https://git.charlesreid1.com/dotfiles/debian/src/branch/master/dotfiles/krash_scripts).
+
+- the <https://git.charlesreid1.com/docker/pod-charlesreid1> repo,
+  mirrored at <https://github.com/charlesreid1-docker/pod-charlesreid1>,
+  in the [`scripts/` directory](https://git.charlesreid1.com/docker/pod-charlesreid1/src/branch/master/scripts)
 
 **If you must:** If you absolutely must you can manually copy files into the `htdocs/`
 directory. But really, everything there should be from the `gh-pages` branch of
@@ -44,9 +51,15 @@ The pelican theme for this site is defined in a separate repo:
 
 <https://git.charlesreid1.com/charlesreid1/charlesreid1.com-theme>
 
-To install, cloen that directory and run
+To install, clone that directory and run
 
 ```
-pelican -i charlesreid1.com-theme
+pelican-themes -i charlesreid1.com-theme
+```
+
+or update the theme if it is already installed:
+
+```
+pelican-themes -U charlesreid1.com-theme
 ```
 
