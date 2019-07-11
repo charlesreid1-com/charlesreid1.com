@@ -114,6 +114,7 @@ Wikipedia article on <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_L
  *
  * Modifications by charles reid
  * 12 February 2018
+ * 11 July 2019
  */
 
 (function () {
@@ -282,26 +283,11 @@ Wikipedia article on <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_L
 
       schemes : [
       {
-        columns : 100,
-        rows : 80,
+        columns : 150,
+        rows : 100,
         cellSize : 7
-        //cellSize : 4
-      },
+      }],
 
-      {
-        columns : 100,
-        rows : 200,
-        cellSize : 7
-       //cellSize : 2
-      },
-
-      {
-        columns : 100,
-        rows : 200,
-        cellSize : 7
-        //cellSize : 1
-      }
-      ]
     },
 
 
@@ -384,10 +370,7 @@ Wikipedia article on <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_L
       }
 
       // Initial zoom config
-      zoom = parseInt(this.helpers.getUrlParameter('zoom'), 10);
-      if (isNaN(zoom) || zoom < 1 || zoom > GOL.zoom.schemes.length) {
-        zoom = 1;
-      }
+      zoom = 1;
 
       this.colors.current = colors - 1;
       this.grid.current = grid - 1;
@@ -404,8 +387,6 @@ Wikipedia article on <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_L
     loadState : function() {
       var state, i, j, y, s = this.helpers.getUrlParameter('s');
 
-      console.log(s);
-
       if ( s === 'random') {
         this.randomState();
       } else {
@@ -414,7 +395,7 @@ Wikipedia article on <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_L
         }
 
         state = jsonParse(decodeURI(s));
-          
+
         for (i = 0; i < state.length; i++) {
           for (y in state[i]) {
             for (j = 0 ; j < state[i][y].length ; j++) {
