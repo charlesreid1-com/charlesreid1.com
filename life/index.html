@@ -469,8 +469,6 @@ Wikipedia article on <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_L
     loadState : function() {
       var state, i, j, y, s = this.helpers.getUrlParameter('s');
 
-      console.log(s);
-
       if ( s === 'random') {
         this.randomState();
       } else {
@@ -479,6 +477,9 @@ Wikipedia article on <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_L
         }
 
         state = jsonParse(decodeURI(s));
+
+        console.log(state);
+
           
         for (i = 0; i < state.length; i++) {
           for (y in state[i]) {
