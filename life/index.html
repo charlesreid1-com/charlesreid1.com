@@ -431,10 +431,9 @@ Wikipedia article on <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_L
     loadConfig : function() {
       var colors, grid, zoom;
 
+      // Add ?autoplay=1 to the end of the URL to enable autoplay
       this.autoplay = this.helpers.getUrlParameter('autoplay') === '1' ? true : this.autoplay;
       
-      console.log(this.autoplay);
-
       this.trail.current = this.helpers.getUrlParameter('trail') === '1' ? true : this.trail.current;
 
       // Initial color config
@@ -469,6 +468,8 @@ Wikipedia article on <a href="https://en.wikipedia.org/wiki/Conway%27s_Game_of_L
          */
     loadState : function() {
       var state, i, j, y, s = this.helpers.getUrlParameter('s');
+
+      console.log(s);
 
       if ( s === 'random') {
         this.randomState();
