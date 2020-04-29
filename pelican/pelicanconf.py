@@ -36,7 +36,6 @@ STATIC_PATHS = ['img']
 # Templates
 
 # template stuff 
-EXTRA_TEMPLATES_PATHS = []
 TEMPLATE_PAGES = {}
 
 TEMPLATE_PAGES['index.html'] = 'index.html'
@@ -71,12 +70,14 @@ TEMPLATE_PAGES['logo.html'] = 'life/logo.html'
 
 
 
+THEME_TEMPLATES_OVERRIDES = []
+
 ### ######################
 ### # Just an example of
 ### # how to add an app folder.
 ### # This assumes your app is 
 ### # in foobar/
-### EXTRA_TEMPLATES_PATHS.append('foobar')
+### THEME_TEMPLATES_OVERRIDES.append('foobar')
 ### TEMPLATE_PAGES['foobar.html'] = 'foobar/index.html'
 ### TEMPLATE_PAGES['foobar.css']  = 'foobar/foobar.css'
 ### TEMPLATE_PAGES['foobar.json'] = 'foobar/foobar.json'
@@ -86,7 +87,7 @@ TEMPLATE_PAGES['logo.html'] = 'life/logo.html'
 
 ## --------------------
 ## Example map app
-#EXTRA_TEMPLATES_PATHS.append('examplemap')
+#THEME_TEMPLATES_OVERRIDES.append('examplemap')
 #TEMPLATE_PAGES['map.html']      = 'examplemap/index.html'
 #TEMPLATE_PAGES['map.js']        = 'examplemap/map.js'
 #TEMPLATE_PAGES['map.css']       = 'examplemap/map.css'
